@@ -21,38 +21,132 @@ License: **GPL v3** (inherited from Hodoku).
   to add a new size, what's deliberately not generalised.
 - This README — quick start, plus a phase-by-phase log of the refactor.
 
-## Quick start
+## Build
+
+Requires Java 11+ and Maven.
 
 ```bash
-# Build (requires Java 11+, Maven)
-JAVA_HOME=/opt/homebrew/opt/openjdk@11 mvn -q package
-
-# Standard 9×9 batch (Hodoku /bs interface)
-java -jar target/Hodoku.jar /bs <input.txt>
-
-# Multi-size batch (auto-detects 4×4/5×5/6×6/7×7/9×9/16×16 from line length)
-java -cp target/Hodoku.jar sudoku.BatchSolveNxN <input.txt>
-
-# Amuse Labs xword.json files (9x9 only) — same CLI
-java -cp target/Hodoku.jar sudoku.BatchSolveNxN puzzle.xword.json [puzzle2.xword.json ...]
-
-# Or mix formats freely
-java -cp target/Hodoku.jar sudoku.BatchSolveNxN flat-batch.txt one.xword.json two.xword.json
-
-# Run the test suite (JUnit 5 — 101 tests across BoardSpec, SpecData, SudokuSetBase,
-# DpllSolver, XwordJson, EndToEnd; plus legacy BoardSpecTest / PhaseSixTest)
-mvn test
-java -cp target/Hodoku.jar sudoku.BoardSpecTest    # legacy custom runner
-java -cp target/Hodoku.jar sudoku.PhaseSixTest     # legacy 4x4/6x6/16x16 smoke test
+mvn -q package
+# → target/Hodoku.jar  (~1.4 MB, self-contained, runnable as both CLI binaries below)
 ```
 
-Input formats accepted by `BatchSolveNxN`:
-- **Flat text** (`.txt`, etc.): one puzzle per line. Size detected from line length
-  (16/25/36/49/81/256). Digits 1..16 encoded as `1..9` then `:`, `;`, `<`, `=`, `>`,
-  `?`, `@`. Empty cells: `.` or `0`. Output to `<input>.out.txt`.
-- **Amuse Labs `xword.json`** (one puzzle per file): files with names ending in
-  `.xword.json` or `.json` are parsed via [`XwordJson`](src/main/java/sudoku/XwordJson.java).
-  9×9 only — that's all the format supports.
+## Usage
+
+The project ships **two CLIs**:
+
+| CLI | Sizes | Input formats | When to use |
+|---|---|---|---|
+| `java -jar target/Hodoku.jar /bs <file>` | 9×9 only | Upstream Hodoku flat text (one puzzle per line, 81 chars) | Drop-in replacement for the original Hodoku; byte-identical output |
+| `java -cp target/Hodoku.jar sudoku.BatchSolveNxN <files...>` | all six | Flat text (any size, auto-detected) **or** Amuse Labs `.xword.json` | Multi-size or `.xword.json` input |
+
+For 9×9, both work and produce the same scores. For anything else, use `BatchSolveNxN`.
+
+### Input format 1: flat text
+
+One puzzle per line. The line's **length determines the board size** — no size header needed.
+
+| Line length | Board | Digits | Box layout |
+|---:|---:|---|---|
+| 16 | 4×4 | `1`–`4` | 2×2 |
+| 25 | 5×5 | `1`–`5` | none (Latin square) |
+| 36 | 6×6 | `1`–`6` | 3-wide × 2-tall |
+| 49 | 7×7 | `1`–`7` | none (Latin square) |
+| 81 | 9×9 | `1`–`9` | 3×3 |
+| 256 | 16×16 | `1`–`9` then `:` `;` `<` `=` `>` `?` `@` | 4×4 |
+
+Empty cells are `.` or `0`. Cells are read **row-major** (left-to-right, top-to-bottom).
+
+Example file `mixed.txt` with one puzzle per size:
+
+```
+1234341.21434.21
+1.3.5..5.1.32.4.6..6.2.43.5.1..1.3.5
+1..45.....56.89..3.......56234.6..91.6...1..48..2..5..3.........7....3..91.34..78
+123456789:;<=>?@56789:;<=>?@1234.:;<=.?@12345678=>?@123456789:;<23456789:;<=>?@…
+```
+
+Four puzzles at 4×4, 6×6, 9×9, 16×16 (the 16×16 line is 256 chars; truncated above for display).
+
+```bash
+java -cp target/Hodoku.jar sudoku.BatchSolveNxN mixed.txt
+```
+
+Output (one line per puzzle in `mixed.txt.out.txt`, summary on stdout):
+
+```
+1234341.21434.21                       #1  Easy      (8)     16/16   248ms
+1.3.5..5.1.32.4.6..6.2.43.5.1..1.3.5   #2  Hard      (202)   36/36    15ms
+1..45.....56.89..3.……                  #3  Extreme   (30328) 81/81   217ms
+123456789:;<=>?@…                      #4  Easy      (20)    256/256  12ms
+```
+
+Each line: `<puzzle>  #<seq>  <Level>  (<score>)  <filled>/<length>  <wall-ms>ms`
+
+### Input format 2: Amuse Labs `.xword.json` (9×9 only)
+
+The Amuse Labs Sudoku JSON shape. Files
+must have a `box` (9-element array of 9-element arrays, **col-major**: `box[c][r]`
+gives the cell at row `r`, col `c`) and a `preRevealIdxs` (same shape, booleans
+marking givens). Everything else in the file is ignored.
+
+```bash
+# One puzzle
+java -cp target/Hodoku.jar sudoku.BatchSolveNxN puzzle.xword.json
+
+# Many at once
+java -cp target/Hodoku.jar sudoku.BatchSolveNxN dir/*.xword.json
+```
+
+Output (one line per puzzle, on stdout):
+
+```
+puzzle  #1  Easy  (176)  81/81  272ms
+```
+
+The filename minus the `.xword.json` suffix is used as the puzzle id in the
+output line.
+
+### Mixing formats in one run
+
+Each file is routed by its extension:
+
+```bash
+java -cp target/Hodoku.jar sudoku.BatchSolveNxN \
+    flat-batch.txt \
+    monday.xword.json \
+    tuesday.xword.json
+```
+
+`.xword.json` results go to stdout, flat-text results to `<input>.out.txt` next to
+the input, and a summary lands on stdout at the end.
+
+### Output meaning
+
+```
+<puzzle>  #<seq>  <Level>  (<score>)  <filled>/<length>  <wall-ms>ms
+```
+
+- `<puzzle>` — the puzzle as supplied (flat text) or its filename id (xword.json)
+- `<seq>` — 1-based counter across the whole run
+- `<Level>` — Hodoku difficulty band: `Easy` `Medium` `Hard` `Unfair` `Extreme`
+- `<score>` — sum of per-technique weights for every step the solver took (see
+  [ARCHITECTURE.md §10](ARCHITECTURE.md))
+- `<filled>/<length>` — how many of the `n²` cells the solver filled
+- `<wall-ms>` — wall-clock milliseconds for that puzzle
+
+If a puzzle can't be parsed or solved, the line reads `… #<seq>  ERROR (<reason>)`
+and the batch continues.
+
+## Tests
+
+```bash
+mvn test
+# → 101 JUnit 5 tests across BoardSpec, SpecData, SudokuSetBase, DpllSolver,
+#    XwordJson, EndToEnd. Builds Hodoku.jar as a side effect.
+
+java -cp target/Hodoku.jar sudoku.BoardSpecTest    # legacy custom runner (10,436 assertions)
+java -cp target/Hodoku.jar sudoku.PhaseSixTest     # 4×4 / 6×6 / 16×16 end-to-end smoke test
+```
 
 ## Refactor log
 

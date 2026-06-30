@@ -15,10 +15,13 @@
 package sudoku;
 
 import sudoku.killer.KillerInput;
+import sudoku.killer.KillerJson;
 import sudoku.killer.KillerPuzzle;
 import sudoku.killer.KillerSolver;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public final class BatchSolveKiller {
@@ -34,12 +37,24 @@ public final class BatchSolveKiller {
 			seq++;
 			String name = Paths.get(path).getFileName().toString();
 			try {
-				KillerPuzzle puzzle = KillerInput.fromFile(Paths.get(path));
+				KillerPuzzle puzzle;
+				String solmap = null;
+				if (path.toLowerCase().endsWith(".json")) {
+					String json = new String(Files.readAllBytes(Paths.get(path)), StandardCharsets.UTF_8);
+					puzzle = KillerJson.fromString(json);
+					solmap = KillerJson.readSolmap(json);
+				} else {
+					puzzle = KillerInput.fromFile(Paths.get(path));
+				}
 				KillerSolver.Result r = KillerSolver.solve(puzzle);
 				if (r.solution != null) {
 					solved++;
-					System.out.printf("%s  #%d  Solved   %dbr/%dbt  %dms%n",
-					    name, seq, r.branches, r.backtracks, r.elapsedMs);
+					String match = "";
+					if (solmap != null) {
+						match = "  " + (matchesSolmap(r.solution, solmap) ? "matches-solmap" : "DIFFERS-from-solmap");
+					}
+					System.out.printf("%s  #%d  Solved   %dbr/%dbt  %dms%s%n",
+					    name, seq, r.branches, r.backtracks, r.elapsedMs, match);
 				} else {
 					unsolvable++;
 					System.out.printf("%s  #%d  Unsolvable   %dbr/%dbt  %dms%n",
@@ -56,5 +71,16 @@ public final class BatchSolveKiller {
 		}
 		System.out.printf("%d puzzles: %d solved, %d unsolvable, %d errors%n",
 		    seq, solved, unsolvable, errors);
+	}
+
+	/** Verify a solver result against an expected `solmap` string from JSON input. */
+	private static boolean matchesSolmap(int[] solution, String solmap) {
+		if (solmap.length() != solution.length) return false;
+		for (int i = 0; i < solution.length; i++) {
+			char expected = solmap.charAt(i);
+			if (expected < '1' || expected > '9') return false;
+			if (solution[i] != expected - '0') return false;
+		}
+		return true;
 	}
 }

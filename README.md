@@ -205,6 +205,39 @@ k4.txt  #1  Solved   16br/0bt  0ms
   Hodoku's per-technique weights for Killer-specific techniques like
   cage-subset reasoning, 45-rule innies/outies, etc.).
 
+### JSON input
+
+`BatchSolveKiller` also accepts the Amuse-flavoured Killer JSON format
+(file extension `.json`):
+
+```json
+{
+  "name": "Killer Sudoku",
+  "game_data": {
+    "rows": 3,                     ← box height (cells per box, vertical)
+    "cols": 3,                     ← box width  (cells per box, horizontal)
+    "solmap": "8193…",             ← optional 81-char solution; if present, the
+                                     CLI cross-checks the solver result against it
+    "clusters": [
+      { "sum": 11, "cells": [1, 10] },
+      { "sum": 19, "cells": [2, 3, 11, 12] },
+      …
+    ]
+  }
+}
+```
+
+Cells in JSON are **1-indexed** (cell 1 = row 0, col 0). The board size is
+derived as `n = rows × cols`.
+
+```bash
+java -cp target/Hodoku.jar sudoku.BatchSolveKiller puzzle.json
+# → puzzle.json  #1  Solved   814br/901bt  3ms  matches-solmap
+```
+
+The `matches-solmap` annotation appears only when the JSON includes a `solmap`
+and the solver result matches it cell-for-cell.
+
 ### What's implemented
 
 - **Solver**: DPLL with three propagation passes — row/col/box uniqueness
@@ -215,6 +248,9 @@ k4.txt  #1  Solved   16br/0bt  0ms
   (4×4, 5×5, 6×6, 7×7, 9×9, 16×16). The cage structure is independent of
   the box layout.
 - **Givens**: optional. Most Killers don't have any.
+- **Input formats**: text format ([`KillerInput`](src/main/java/sudoku/killer/KillerInput.java))
+  or Amuse Killer JSON ([`KillerJson`](src/main/java/sudoku/killer/KillerJson.java));
+  the CLI auto-detects by file extension.
 
 ### What's not yet implemented
 

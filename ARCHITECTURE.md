@@ -137,6 +137,28 @@ String puzzle = XwordJson.fileTo81(Paths.get("puzzle.xword.json"));
 throws if either field isn't a 9×9 nested array. Used automatically by
 `BatchSolveNxN` whenever a file argument ends in `.xword.json` or `.json`.
 
+### Killer Sudoku — separate package, layered on top
+
+`sudoku.killer.*` adds support for Killer Sudoku. Three small classes:
+
+- **`Cage`** — immutable record: `id`, `sum`, `cells[]`.
+- **`KillerPuzzle`** — a `BoardSpec` plus a partition of the grid into cages.
+  Validates the partition at construction (every cell in exactly one cage; no
+  cage exceeds `n` cells; total cage sums equal `n × Σ(1..n)`).
+- **`KillerSolver`** — DPLL specialised for Killer constraints. Three
+  propagation layers: row/col/box uniqueness (via `BoardSpec`), cage
+  uniqueness (no digit repeats within a cage), and cage sum (live tracking
+  of remaining-sum and remaining-cells per cage, plus a min/max-digit bound
+  derived from the cage's remaining state). Reports `branches` /
+  `backtracks` as a search-effort proxy for difficulty.
+
+The Killer pipeline doesn't share solver code with the standard pipeline —
+the constraint set is different enough (cages aren't a `BoardSpec` unit
+because their sizes vary). It does share `BoardSpec` for the row/col/box
+side, which keeps n×n parameterisation uniform.
+
+`BatchSolveKiller` is the corresponding CLI.
+
 ### `DpllSolver` — spec-aware backtracking fallback
 
 Forty lines of recursive MRV-driven DPLL that takes a `Sudoku2` and returns a

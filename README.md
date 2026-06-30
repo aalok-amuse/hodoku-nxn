@@ -32,14 +32,15 @@ mvn -q package
 
 ## Usage
 
-The project ships **two CLIs**:
+The project ships **three CLIs**:
 
-| CLI | Sizes | Input formats | When to use |
+| CLI | Variant | Sizes | Input formats |
 |---|---|---|---|
-| `java -jar target/Hodoku.jar /bs <file>` | 9×9 only | Upstream Hodoku flat text (one puzzle per line, 81 chars) | Drop-in replacement for the original Hodoku; byte-identical output |
-| `java -cp target/Hodoku.jar sudoku.BatchSolveNxN <files...>` | all six | Flat text (any size, auto-detected) **or** Amuse Labs `.xword.json` | Multi-size or `.xword.json` input |
+| `java -jar target/Hodoku.jar /bs <file>` | standard Sudoku | 9×9 only | Upstream Hodoku flat text (one puzzle per line, 81 chars) |
+| `java -cp target/Hodoku.jar sudoku.BatchSolveNxN <files...>` | standard Sudoku | all six | Flat text (any size, auto-detected) **or** Amuse Labs `.xword.json` |
+| `java -cp target/Hodoku.jar sudoku.BatchSolveKiller <files...>` | **Killer Sudoku** | 4×4, 5×5, 6×6, 7×7, 9×9, 16×16 | Killer text format (size + cage grid + sum list); see [§ Killer Sudoku](#killer-sudoku) |
 
-For 9×9, both work and produce the same scores. For anything else, use `BatchSolveNxN`.
+For 9×9 standard Sudoku, `/bs` and `BatchSolveNxN` produce byte-identical scores. For other sizes (standard) use `BatchSolveNxN`. For Killer puzzles, use `BatchSolveKiller`.
 
 ### Input format 1: flat text
 
@@ -136,6 +137,91 @@ the input, and a summary lands on stdout at the end.
 
 If a puzzle can't be parsed or solved, the line reads `… #<seq>  ERROR (<reason>)`
 and the batch continues.
+
+## Killer Sudoku
+
+Killer Sudoku adds **cages** on top of standard Sudoku: irregular groups of
+cells that must (a) hold distinct digits and (b) sum to a target value. Most
+Killer puzzles have no givens — the cage sums alone constrain the solution.
+
+### Input format
+
+```
+# Comments and blank lines are ignored.
+<size>                              ← 4 / 5 / 6 / 7 / 9 / 16
+<cage grid: <size> rows of <size> tokens each>
+<cage sums: one "<id> = <sum>" per line>
+
+# Optionally, after the sums:
+givens:
+<size rows of single digit chars; '.' or '0' for empty>
+```
+
+Each grid token is any non-whitespace string serving as a cage id (typically
+letters `A`, `B`, …, `AA`, `AB`, …). All cells with the same id belong to the
+same cage. Every cage id must have a matching `id = sum` line; total cage sums
+must equal n × (1+2+…+n).
+
+### Example: a 4×4 Killer
+
+`k4.txt`:
+
+```
+4
+A A B B
+C C D D
+E E F F
+G G H H
+A = 3
+B = 7
+C = 7
+D = 3
+E = 3
+F = 7
+G = 7
+H = 3
+```
+
+```bash
+java -cp target/Hodoku.jar sudoku.BatchSolveKiller k4.txt
+```
+
+Output:
+
+```
+k4.txt  #1  Solved   16br/0bt  0ms
+1 puzzles: 1 solved, 0 unsolvable, 0 errors
+```
+
+### Output format
+
+```
+<file>  #<seq>  <Solved|Unsolvable>  <branches>br/<backtracks>bt  <ms>ms
+```
+
+- `<branches>` and `<backtracks>` are search-effort counters from the
+  backtracking solver — a crude difficulty proxy (more search = harder).
+- No technique-level scoring yet; that's a follow-up (the equivalent of
+  Hodoku's per-technique weights for Killer-specific techniques like
+  cage-subset reasoning, 45-rule innies/outies, etc.).
+
+### What's implemented
+
+- **Solver**: DPLL with three propagation passes — row/col/box uniqueness
+  (standard Sudoku), cage uniqueness, cage-sum constraints. Plus a
+  cage-bound propagation that derives min/max candidate digits from the
+  cage's remaining sum and remaining cells.
+- **Sizes**: any of the six board sizes that standard Sudoku supports
+  (4×4, 5×5, 6×6, 7×7, 9×9, 16×16). The cage structure is independent of
+  the box layout.
+- **Givens**: optional. Most Killers don't have any.
+
+### What's not yet implemented
+
+- Technique-by-technique scoring (cage subset reasoning, 45-rule,
+  innie/outie, etc.).
+- Per-spec difficulty bands.
+- A Killer-specific output format (xword.json equivalent).
 
 ## Tests
 

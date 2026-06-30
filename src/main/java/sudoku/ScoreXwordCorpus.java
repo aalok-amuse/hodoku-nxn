@@ -64,7 +64,7 @@ public final class ScoreXwordCorpus {
 		});
 		long perPuzzleBudgetMs = 5000;  // bail out of stuck puzzles after 5s
 		try (BufferedWriter w = Files.newBufferedWriter(out, StandardCharsets.UTF_8)) {
-			w.write("size,difficulty,puzzle_id,givens,score,level,ms,note");
+			w.write("size,difficulty,puzzle_id,givens,score,level,size_band,ms,note");
 			w.newLine();
 
 			int done = 0, errors = 0, timeouts = 0;
@@ -80,8 +80,10 @@ public final class ScoreXwordCorpus {
 				Future<Row> fut = exec.submit(() -> scoreOne(p));
 				try {
 					Row r = fut.get(perPuzzleBudgetMs, TimeUnit.MILLISECONDS);
-					w.write(String.format("%s,%s,%s,%d,%d,%s,%d,",
-					    size, diff, id, r.givens, r.score, r.level, r.ms));
+					int n = Integer.parseInt(size);
+					SizeBands.Band sb = SizeBands.levelFor(n, r.score);
+					w.write(String.format("%s,%s,%s,%d,%d,%s,%s,%d,",
+					    size, diff, id, r.givens, r.score, r.level, sb.displayName(), r.ms));
 					w.newLine();
 				} catch (TimeoutException te) {
 					timeouts++;
@@ -93,13 +95,13 @@ public final class ScoreXwordCorpus {
 						t.setDaemon(true);
 						return t;
 					});
-					w.write(String.format("%s,%s,%s,,,,,timeout-after-%dms",
+					w.write(String.format("%s,%s,%s,,,,,,timeout-after-%dms",
 					    size, diff, id, perPuzzleBudgetMs));
 					w.newLine();
 				} catch (Throwable t) {
 					errors++;
 					Throwable cause = t.getCause() != null ? t.getCause() : t;
-					w.write(String.format("%s,%s,%s,,,,,%s:%s",
+					w.write(String.format("%s,%s,%s,,,,,,%s:%s",
 					    size, diff, id, cause.getClass().getSimpleName(),
 					    String.valueOf(cause.getMessage()).replace(',', ' ').replace('\n', ' ')));
 					w.newLine();

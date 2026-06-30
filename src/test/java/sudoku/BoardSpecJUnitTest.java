@@ -35,8 +35,10 @@ class BoardSpecJUnitTest {
 	@Test
 	@DisplayName("BoardSpec.of rejects unsupported sizes")
 	void ofRejectsUnsupported() {
-		assertThrows(IllegalArgumentException.class, () -> BoardSpec.of(8));
+		// 8 is now supported (added for the al-sudoku content library at 8x8).
+		// 10/11/12/13/14/15 remain unsupported.
 		assertThrows(IllegalArgumentException.class, () -> BoardSpec.of(10));
+		assertThrows(IllegalArgumentException.class, () -> BoardSpec.of(11));
 		assertThrows(IllegalArgumentException.class, () -> BoardSpec.of(3));
 	}
 

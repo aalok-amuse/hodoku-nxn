@@ -718,9 +718,12 @@ public class SimpleSolver extends AbstractSolver {
 		SudokuUtil.clearStepList(steps);
 		SolutionStep step = null;
 		if (type == SolutionType.LOCKED_CANDIDATES || type == SolutionType.LOCKED_CANDIDATES_1) {
-			step = findLockedCandidatesInEntityN(2 * sudoku.getUnitCount(), sudoku.getBoxesArr(), true);
-			if (step != null) {
-				return step;
+			// Locked Candidates 1 (pointing) only applies if blocks exist.
+			if (sudoku.hasBoxes()) {
+				step = findLockedCandidatesInEntityN(2 * sudoku.getUnitCount(), sudoku.getBoxesArr(), true);
+				if (step != null) {
+					return step;
+				}
 			}
 		}
 		if (type == SolutionType.LOCKED_CANDIDATES || type == SolutionType.LOCKED_CANDIDATES_2) {
@@ -747,7 +750,9 @@ public class SimpleSolver extends AbstractSolver {
 		List<SolutionStep> oldList = steps;
 		List<SolutionStep> newList = new ArrayList<SolutionStep>();
 		steps = newList;
-		findLockedCandidatesInEntityN(2 * sudoku.getUnitCount(), sudoku.getBoxesArr(), false);
+		if (sudoku.hasBoxes()) {
+			findLockedCandidatesInEntityN(2 * sudoku.getUnitCount(), sudoku.getBoxesArr(), false);
+		}
 		findLockedCandidatesInEntityN(0, sudoku.getRowsArr(), false);
 		findLockedCandidatesInEntityN(sudoku.getUnitCount(), sudoku.getColsArr(), false);
 		Collections.sort(steps);
@@ -779,7 +784,10 @@ public class SimpleSolver extends AbstractSolver {
 				if (unitFree == 2 || unitFree == 3) {
 					// possible Locked Candidates: check the cells
 					boolean first = true;
-					sameConstraint[0] = sameConstraint[1] = sameConstraint[2] = true;
+					// constrPerCell is 3 for box-based grids (row/col/box), 2 for
+					// Latin squares (row/col). Don't hardcode the 9x9 value.
+					int constrPerCell = sudoku.getConstraintsArr()[0].length;
+					for (int j = 0; j < constrPerCell; j++) sameConstraint[j] = true;
 					for (int i = 0; i < indices[constr].length; i++) {
 						int index = indices[constr][i];
 						short cell = sudoku.getCell(index);
@@ -788,12 +796,12 @@ public class SimpleSolver extends AbstractSolver {
 							continue;
 						}
 						if (first) {
-							constraint[0] = sudoku.getConstraintsArr()[index][0];
-							constraint[1] = sudoku.getConstraintsArr()[index][1];
-							constraint[2] = sudoku.getConstraintsArr()[index][2];
+							for (int j = 0; j < constrPerCell; j++) {
+								constraint[j] = sudoku.getConstraintsArr()[index][j];
+							}
 							first = false;
 						} else {
-							for (int j = 0; j < sudoku.getConstraintsArr()[0].length; j++) {
+							for (int j = 0; j < constrPerCell; j++) {
 								if (sameConstraint[j] && constraint[j] != sudoku.getConstraintsArr()[index][j]) {
 									sameConstraint[j] = false;
 								}
@@ -822,8 +830,8 @@ public class SimpleSolver extends AbstractSolver {
 							steps.add(step);
 						}
 					} else {
-						// we search lines or cols -> LC2 possible
-						if (sameConstraint[2] && free[constraint[2]][cand] > unitFree) {
+						// we search lines or cols -> LC2 possible only if blocks exist
+						if (sudoku.hasBoxes() && sameConstraint[2] && free[constraint[2]][cand] > unitFree) {
 							// LC Type 2 -> eliminations in block only
 							step = createLockedCandidatesStep(SolutionType.LOCKED_CANDIDATES_2, cand, skipConstraint,
 									sudoku.getAllUnitsArr()[constraint[2]]);
@@ -950,12 +958,13 @@ public class SimpleSolver extends AbstractSolver {
 		globalStep.setType(type);
 
 		// determine the constraints to which the cells belong
-		sameConstraint[0] = sameConstraint[1] = sameConstraint[2] = true;
-		constraint[0] = sudoku.getConstraintsArr()[indices[0]][0];
-		constraint[1] = sudoku.getConstraintsArr()[indices[0]][1];
-		constraint[2] = sudoku.getConstraintsArr()[indices[0]][2];
+		int constrPerCell = sudoku.getConstraintsArr()[0].length;
+		for (int j = 0; j < constrPerCell; j++) {
+			sameConstraint[j] = true;
+			constraint[j] = sudoku.getConstraintsArr()[indices[0]][j];
+		}
 		for (int i = 1; i < indices.length; i++) {
-			for (int j = 0; j < sudoku.getConstraintsArr()[0].length; j++) {
+			for (int j = 0; j < constrPerCell; j++) {
 				if (sameConstraint[j] && constraint[j] != sudoku.getConstraintsArr()[indices[i]][j]) {
 					sameConstraint[j] = false;
 				}
@@ -981,7 +990,7 @@ public class SimpleSolver extends AbstractSolver {
 			}
 		} else {
 			// candidates have to be deleted in all other cells of all common constraints
-			foundConstraint[0] = foundConstraint[1] = foundConstraint[2] = false;
+			for (int j = 0; j < constrPerCell; j++) foundConstraint[j] = false;
 			for (int i = 0; i < sameConstraint.length; i++) {
 				if (!sameConstraint[i]) {
 					continue;
@@ -1012,9 +1021,14 @@ public class SimpleSolver extends AbstractSolver {
 //                    System.out.println("  candArray: " + Arrays.toString(candArray));
 					for (int k = 0; k < candArray.length; k++) {
 						globalStep.addCandidateToDelete(cells[j], candArray[k]);
-						if (!foundConstraint[i] && ((i == 2) || (sudoku.getConstraintsArr()[cells[j]][2] != constraint[2]))) {
-							// we are in a line or a col and the cell is not in the block -> Locked Pair!
-							// if we are in the block -> count anyway
+						// Locked Pair check only matters if blocks (i==2) exist.
+						boolean trips;
+						if (constrPerCell <= 2) {
+							trips = !foundConstraint[i];
+						} else {
+							trips = !foundConstraint[i] && ((i == 2) || (sudoku.getConstraintsArr()[cells[j]][2] != constraint[2]));
+						}
+						if (trips) {
 							foundConstraint[i] = true;
 							anzFoundConstraints++;
 						}
@@ -1028,9 +1042,10 @@ public class SimpleSolver extends AbstractSolver {
 			return null;
 		}
 
-		// check for Locked Subsets
+		// check for Locked Subsets — requires a block constraint
 		boolean isLocked = false;
-		if (indices.length < 4 && anzFoundConstraints > 1 && !type.isHiddenSubset()
+		if (constrPerCell > 2 && indices.length < 4 && anzFoundConstraints > 1
+				&& !type.isHiddenSubset()
 				&& (sameConstraint[2] && sameConstraint[0] || sameConstraint[2] && sameConstraint[1])) {
 			isLocked = true;
 		}

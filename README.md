@@ -196,14 +196,32 @@ k4.txt  #1  Solved   16br/0bt  0ms
 ### Output format
 
 ```
-<file>  #<seq>  <Solved|Unsolvable>  <branches>br/<backtracks>bt  <ms>ms
+<file>  #<seq>  <Level>[/BF]  logical=<X>  total=<Y>  <steps>steps  <ms>ms  [matches-solmap]
 ```
 
-- `<branches>` and `<backtracks>` are search-effort counters from the
-  backtracking solver — a crude difficulty proxy (more search = harder).
-- No technique-level scoring yet; that's a follow-up (the equivalent of
-  Hodoku's per-technique weights for Killer-specific techniques like
-  cage-subset reasoning, 45-rule innies/outies, etc.).
+- `<Level>` — the band the puzzle's *logical* effort lands in:
+  `EASY` ≤ 800, `MEDIUM` ≤ 1500, `HARD` ≤ 2500, `UNFAIR` ≤ 4000, `EXTREME` above.
+- `/BF` suffix — appears when the technique set was incomplete and the solver
+  fell back to brute force to finish (always pushes the final band to EXTREME).
+- `logical=<X>` — sum of weights of every logical step the scorer took
+  (without brute-force penalty).
+- `total=<Y>` — `logical` plus the brute-force weight (5000) if applied.
+- `<steps>` — count of named technique applications.
+
+### Implemented techniques
+
+| Technique | Weight | Level |
+|---|---:|---|
+| `NAKED_SINGLE` | 4 | EASY |
+| `HIDDEN_SINGLE` | 14 | EASY |
+| `CAGE_UNIQUENESS` | 10 | EASY |
+| `CAGE_SUBSET` (combo-union elimination) | 20 | EASY |
+| `LOCKED_CANDIDATES` (digit guaranteed in cage shares row/col/box) | 40 | MEDIUM |
+| `CAGE_45_INNIE` (single innie via 45-rule) | 60 | MEDIUM |
+| `BRUTE_FORCE` (DPLL fallback) | 5000 | EXTREME |
+
+Each step adds its weight to the running score; the level is the higher of
+(highest per-step level) and (band the cumulative score falls in).
 
 ### JSON input
 

@@ -49,9 +49,14 @@ public final class KillerScorer {
 		public final List<KillerStep> steps;
 		public final long elapsedMs;
 		public final boolean bruteForced;            // true if logical solving was incomplete
+		/** Brute-force branches consumed (0 if logically solved). */
+		public final int bruteForceBranches;
+		/** Brute-force backtracks consumed (0 if logically solved). */
+		public final int bruteForceBacktracks;
 
 		Result(int[] solution, int logicalScore, KillerTechnique.Level logicalLevel,
-		       List<KillerStep> steps, long elapsedMs, boolean bruteForced) {
+		       List<KillerStep> steps, long elapsedMs, boolean bruteForced,
+		       int bfBranches, int bfBacktracks) {
 			this.solution = solution;
 			this.logicalScore = logicalScore;
 			this.logicalLevel = logicalLevel;
@@ -60,6 +65,8 @@ public final class KillerScorer {
 			this.bruteForced = bruteForced;
 			this.score = bruteForced ? logicalScore + KillerTechnique.BRUTE_FORCE.weight : logicalScore;
 			this.level = bruteForced ? KillerTechnique.Level.EXTREME : logicalLevel;
+			this.bruteForceBranches = bfBranches;
+			this.bruteForceBacktracks = bfBacktracks;
 		}
 	}
 
@@ -108,7 +115,7 @@ public final class KillerScorer {
 			if (v != 0) {
 				if (!s.placeWithoutScoring(i, v)) {
 					return new Result(null, 0, KillerTechnique.Level.EXTREME,
-					                  s.steps, ms(t0), false);
+					                  s.steps, ms(t0), false, 0, 0);
 				}
 			}
 		}
@@ -138,18 +145,20 @@ public final class KillerScorer {
 		}
 
 		if (s.isSolved()) {
-			return new Result(s.values, s.score, s.level, s.steps, ms(t0), false);
+			return new Result(s.values, s.score, s.level, s.steps, ms(t0), false, 0, 0);
 		}
 
 		// Brute-force fallback.
 		KillerSolver.Result dpll = KillerSolver.solve(rebuildAsKillerPuzzle(s));
 		if (dpll.solution == null) {
-			return new Result(null, s.score, s.level, s.steps, ms(t0), false);
+			return new Result(null, s.score, s.level, s.steps, ms(t0), false,
+			                  dpll.branches, dpll.backtracks);
 		}
 		s.steps.add(new KillerStep(KillerTechnique.BRUTE_FORCE, -1, 0));
 		// Adopt the DPLL solution as the final values.
 		for (int i = 0; i < s.len; i++) s.values[i] = dpll.solution[i];
-		return new Result(s.values, s.score, s.level, s.steps, ms(t0), true);
+		return new Result(s.values, s.score, s.level, s.steps, ms(t0), true,
+		                  dpll.branches, dpll.backtracks);
 	}
 
 	private static long ms(long t0) { return (System.nanoTime() - t0) / 1_000_000; }

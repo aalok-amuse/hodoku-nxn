@@ -17,6 +17,86 @@ package sudoku;
 
 public final class DpllSolver {
 
+	/** Result of a counted solve — solution plus brute-force search-effort counters. */
+	public static final class Result {
+		public final int[] solution;   // null if unsolvable
+		public final int branches;     // cells the search descended into
+		public final int backtracks;   // cells the search backed out of
+		Result(int[] solution, int branches, int backtracks) {
+			this.solution = solution;
+			this.branches = branches;
+			this.backtracks = backtracks;
+		}
+	}
+
+	/** Like {@link #solve} but also counts branches/backtracks for difficulty diagnostics. */
+	public static Result solveCounted(Sudoku2 sudoku) {
+		BoardSpec spec = sudoku.getSpec();
+		int[] values = sudoku.getValues().clone();
+		int[] cands = new int[spec.length];
+		int allMask = spec.maxMask & 0xFFFF;
+		for (int i = 0; i < spec.length; i++) {
+			cands[i] = values[i] == 0 ? allMask : 0;
+		}
+		for (int i = 0; i < spec.length; i++) {
+			if (values[i] != 0) {
+				int bit = 1 << (values[i] - 1);
+				for (int unitIdx : spec.constraints[i]) {
+					for (int peer : spec.allUnits[unitIdx]) {
+						if (peer != i) cands[peer] &= ~bit;
+					}
+				}
+			}
+		}
+		for (int i = 0; i < spec.length; i++) {
+			if (values[i] == 0 && cands[i] == 0) return new Result(null, 0, 0);
+		}
+		int[] counters = new int[2];
+		boolean ok = solveRecCounted(spec, values, cands, counters);
+		return new Result(ok ? values : null, counters[0], counters[1]);
+	}
+
+	private static boolean solveRecCounted(BoardSpec spec, int[] values, int[] cands, int[] counters) {
+		int bestIdx = -1, bestCount = Integer.MAX_VALUE;
+		for (int i = 0; i < spec.length; i++) {
+			if (values[i] != 0) continue;
+			int m = cands[i];
+			if (m == 0) return false;
+			int c = Integer.bitCount(m);
+			if (c < bestCount) { bestCount = c; bestIdx = i; if (c == 1) break; }
+		}
+		if (bestIdx == -1) return true;
+		int mask = cands[bestIdx];
+		while (mask != 0) {
+			int bit = Integer.lowestOneBit(mask);
+			mask ^= bit;
+			int digit = Integer.numberOfTrailingZeros(bit) + 1;
+			int oldVal = values[bestIdx];
+			values[bestIdx] = digit;
+			int[] candsCopy = cands.clone();
+			counters[0]++; // branch
+			boolean ok = true;
+			for (int unitIdx : spec.constraints[bestIdx]) {
+				if (!ok) break;
+				for (int peer : spec.allUnits[unitIdx]) {
+					if (peer == bestIdx) continue;
+					int prev = cands[peer];
+					int next = prev & ~bit;
+					if (prev != next) {
+						cands[peer] = next;
+						if (values[peer] == 0 && next == 0) { ok = false; break; }
+					}
+				}
+			}
+			cands[bestIdx] = 0;
+			if (ok && solveRecCounted(spec, values, cands, counters)) return true;
+			counters[1]++; // backtrack
+			values[bestIdx] = oldVal;
+			System.arraycopy(candsCopy, 0, cands, 0, cands.length);
+		}
+		return false;
+	}
+
 	/** @return solved values[length] array, or null if unsolvable. */
 	public static int[] solve(Sudoku2 sudoku) {
 		BoardSpec spec = sudoku.getSpec();

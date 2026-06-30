@@ -223,6 +223,69 @@ k4.txt  #1  Solved   16br/0bt  0ms
 Each step adds its weight to the running score; the level is the higher of
 (highest per-step level) and (band the cumulative score falls in).
 
+## Scoring validation
+
+The scoring system has three independent calibration questions, only one of
+which is calibrated upstream:
+
+| Domain | Weights | Bands | Status |
+|---|---|---|---|
+| 9×9 vanilla | Hodoku's | Hodoku's | calibrated upstream |
+| non-9×9 vanilla (4/5/6/7/16) | inherited | inherited | unvalidated |
+| Killer (any size) | this fork's | this fork's | unvalidated |
+
+To validate without external labels, `BatchValidateScoring` correlates each
+puzzle's logical score with brute-force DPLL search effort (a corpus-free
+hardness proxy). Strong correlation means the score tracks the objective
+signal.
+
+```bash
+java -cp target/Hodoku.jar sudoku.BatchValidateScoring <files>...
+# auto-detects .json (Killer JSON), Killer text (lines with '='), or vanilla
+# (one puzzle per line, 81 chars for 9×9, etc.)
+```
+
+Output per (size, variant) bucket includes Spearman ρ(score, branches) and
+ρ(score, backtracks), with interpretation (`strong` ≥ 0.7, `moderate` ≥ 0.4,
+`weak` ≥ 0.2, else `essentially none`).
+
+For convenience, `GenerateVanillaCorpus` synthesises diverse puzzles for any
+supported size:
+
+```bash
+java -cp target/Hodoku.jar sudoku.GenerateVanillaCorpus 9 100 30 corpus/v9.txt
+# args: size, count, clues per puzzle, output path
+```
+
+### What validation has shown so far
+
+Run on 800 real difficulty-varied 9×9 puzzles, 50 from each of four
+difficulty bands (Easy/Medium/Hard/Expert):
+
+| Band | n | score range | branches range | ρ(score, branches) |
+|---|---:|---|---|---:|
+| Easy | 50 | 172–348 | 43–119 | **+0.86** strong |
+| Medium | 50 | 224–532 | 55–1,582 | +0.14 none |
+| Hard | 50 | 320–698 | 54–5,128 | +0.46 moderate |
+| Expert | 50 | 320–972 | 57–1,416 | +0.10 none |
+| Combined | 200 | 164–972 | 41–12,112 | +0.65 moderate |
+
+Interpretation: 9×9 vanilla scoring separates *across bands* well (combined
+ρ = 0.65) but discriminates *within Expert/Medium bands* poorly (ρ ≈ 0.1).
+That's a real limit of Hodoku's per-technique weights at the difficult end —
+two Expert puzzles can share a logical score but differ ~25× in brute-force
+effort.
+
+For the non-9×9 vanilla sizes, the upstream Hodoku scorer is largely 9×9-
+hardcoded: 4×4 saturates at one score for nearly every puzzle, 7×7 crashes
+on most inputs, 16×16 returns score = 0 for everything. These sizes will
+need a re-derived weight set before they can be ranked.
+
+For Killer, the technique set isn't yet rich enough for non-trivial puzzles
+to solve purely logically — all observed real puzzles fall back to brute
+force. Correlation will only be measurable once more techniques land
+(multi-cell innies/outies, killer pairs/triples, cage splits).
+
 ### JSON input
 
 `BatchSolveKiller` also accepts the Amuse-flavoured Killer JSON format

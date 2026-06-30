@@ -1,0 +1,19 @@
+{
+  "name": "Killer Sudoku",
+  "game_data": {
+    "rows": 2,
+    "cols": 2,
+    "solmap": "1234341221434321",
+    "plevel": 2,
+    "clusters": [
+      { "sum": 6, "cells": [1, 2, 5] },
+      { "sum": 7, "cells": [3, 4] },
+      { "sum": 4, "cells": [6] },
+      { "sum": 6, "cells": [7, 8, 12] },
+      { "sum": 6, "cells": [9, 13] },
+      { "sum": 5, "cells": [10, 11] },
+      { "sum": 5, "cells": [14, 15] },
+      { "sum": 1, "cells": [16] }
+    ]
+  }
+}

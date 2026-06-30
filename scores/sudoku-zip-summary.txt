@@ -1,41 +1,39 @@
-Hodoku raw level (9x9-calibrated thresholds):
+size-band counts by source label:
+size  source     n  err  size-band breakdown
+   4    easy   184    0  Easy=178, Medium=6
+   4  medium   125    0  Medium=85, Easy=40
+   5    easy    90    0  Easy=75, Medium=11, Hard=4
+   5    hard   112    0  Hard=112
+   5  medium   106    0  Medium=52, Easy=38, Hard=16
+   6    easy   354   11  Easy=314, Medium=40
+   6    hard    75   26  Medium=55, Easy=17, Hard=3
+   6  medium   259   83  Medium=225, Easy=28, Hard=6
+   7    easy   192    0  Easy=166, Medium=25, Hard=1
+   7    hard    95   18  Hard=95
+   7  medium   161    0  Medium=127, Hard=31, Easy=3
+   8    easy   362    0  Easy=300, Medium=56, Extreme=5, Hard=1
+   8    hard   118    0  Medium=68, Hard=26, Extreme=23, Easy=1
+   8  medium   344    1  Medium=258, Hard=48, Extreme=38
+   9    easy   365    0  Easy=298, Medium=67
+   9    hard   365    0  Hard=294, Medium=71
+   9  medium   365    0  Medium=299, Hard=66
 
-size  source     n  raw level breakdown
-   4    easy   184  Easy=184
-   4  medium   125  Easy=125
-   5    easy    90  Easy=90
-   5    hard   112  Easy=112
-   5  medium   106  Easy=106
-   6    easy   365  Easy=349, Hard=11, Medium=5
-   6    hard    99  Easy=67, Hard=26, Medium=6
-   6  medium   341  Easy=225, Hard=83, Medium=33
-   7    easy   192  Easy=192
-   7    hard   113  Medium=95, Hard=18
-   7  medium   161  Easy=161
-   8    easy   361  Easy=354, Hard=4, Medium=3
-   8    hard   105  Easy=63, Medium=30, Hard=12
-   8  medium   325  Easy=235, Medium=64, Hard=26
-   9    easy   365  Easy=365
-   9    hard   365  Medium=365
-   9  medium   365  Easy=365
-
-Size-banded label (per-size thresholds from SizeBands.java):
-
-size  source     n  size-band breakdown
-   4    easy   184  Easy=178(96%), Medium=6(3%)
-   4  medium   125  Medium=85(68%), Easy=40(32%)
-   5    easy    90  Easy=75(83%), Medium=11(12%), Hard=4(4%)
-   5    hard   112  Hard=112(100%)
-   5  medium   106  Medium=52(49%), Easy=38(35%), Hard=16(15%)
-   6    easy   365  Easy=314(86%), Medium=49(13%), Hard=2(0%)
-   6    hard    99  Medium=59(59%), Hard=23(23%), Easy=17(17%)
-   6  medium   341  Medium=245(71%), Hard=67(19%), Easy=28(8%), Unfair=1(0%)
-   7    easy   192  Easy=166(86%), Medium=25(13%), Hard=1(0%)
-   7    hard   113  Hard=113(100%)
-   7  medium   161  Medium=127(78%), Hard=31(19%), Easy=3(1%)
-   8    easy   361  Easy=300(83%), Medium=60(16%), Hard=1(0%)
-   8    hard   105  Medium=68(64%), Hard=36(34%), Easy=1(0%)
-   8  medium   325  Medium=261(80%), Hard=62(19%), Unfair=2(0%)
-   9    easy   365  Easy=298(81%), Medium=67(18%)
-   9    hard   365  Hard=294(80%), Medium=71(19%)
-   9  medium   365  Medium=299(81%), Hard=66(18%)
+score distribution (min/median/max):
+size  source  minS  medS   maxS
+   4    easy    32    40     48
+   4  medium    40    48     48
+   5    easy    48    52     60
+   5    hard    60    68    128
+   5  medium    48    56     74
+   6    easy    68    80    196
+   6    hard    84   104    720
+   6  medium    88   110    348
+   7    easy    84    88    142
+   7    hard   184   234    408
+   7  medium    92   116    206
+   8    easy   116   128  52868
+   8    hard   134   284  78868
+   8  medium   138   220  85706
+   9    easy   160   192    364
+   9    hard   298   484    844
+   9  medium   224   358    526

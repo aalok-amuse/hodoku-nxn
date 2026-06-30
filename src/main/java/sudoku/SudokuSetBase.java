@@ -177,8 +177,13 @@ public class SudokuSetBase implements Cloneable, Serializable {
 	}
 
 	public final void set(SudokuSetBase set) {
-		// Both sets must agree on storage size; assertion-style check.
-		System.arraycopy(set.words, 0, words, 0, words.length);
+		// Solver-side scratch sets are typically allocated 2-words (legacy 9x9
+		// default) but a puzzle's candidate sets are spec-sized: for boards
+		// below 9x9 the source can be shorter. Copy what's available; zero
+		// any remaining words.
+		int n = Math.min(words.length, set.words.length);
+		System.arraycopy(set.words, 0, words, 0, n);
+		for (int i = n; i < words.length; i++) words[i] = 0L;
 		initialized = false;
 	}
 

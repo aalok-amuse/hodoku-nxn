@@ -1,5 +1,5 @@
 size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
-4,easy,al-sudoku-easy-1,6,40,Easy,Easy,102,
+4,easy,al-sudoku-easy-1,6,40,Easy,Easy,98,
 4,easy,al-sudoku-easy-10,6,40,Easy,Easy,0,
 4,easy,al-sudoku-easy-100,6,40,Easy,Easy,0,
 4,easy,al-sudoku-easy-101,6,40,Easy,Easy,0,
@@ -103,7 +103,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 4,easy,al-sudoku-easy-24,6,40,Easy,Easy,0,
 4,easy,al-sudoku-easy-25,6,40,Easy,Easy,0,
 4,easy,al-sudoku-easy-26,7,36,Easy,Easy,0,
-4,easy,al-sudoku-easy-27,8,32,Easy,Easy,0,
+4,easy,al-sudoku-easy-27,8,32,Easy,Easy,19,
 4,easy,al-sudoku-easy-28,6,40,Easy,Easy,0,
 4,easy,al-sudoku-easy-29,6,40,Easy,Easy,0,
 4,easy,al-sudoku-easy-3,5,44,Easy,Easy,0,
@@ -606,7 +606,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 5,medium,al-sudoku-medium-88,11,56,Easy,Medium,0,
 5,medium,al-sudoku-medium-89,11,56,Easy,Medium,0,
 5,medium,al-sudoku-medium-9,11,56,Easy,Medium,0,
-5,medium,al-sudoku-medium-90,9,74,Easy,Hard,1,
+5,medium,al-sudoku-medium-90,9,74,Easy,Hard,0,
 5,medium,al-sudoku-medium-91,11,56,Easy,Medium,0,
 5,medium,al-sudoku-medium-92,13,48,Easy,Easy,0,
 5,medium,al-sudoku-medium-93,12,52,Easy,Easy,0,
@@ -637,7 +637,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-115,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-116,12,106,Easy,Medium,0,
 6,easy,al-sudoku-easy-117,17,76,Easy,Easy,0,
-6,easy,al-sudoku-easy-118,18,72,Easy,Easy,1,
+6,easy,al-sudoku-easy-118,18,72,Easy,Easy,0,
 6,easy,al-sudoku-easy-119,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-12,14,88,Easy,Easy,0,
 6,easy,al-sudoku-easy-120,11,170,Medium,Medium,4,
@@ -675,8 +675,8 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-15,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-150,11,110,Easy,Medium,0,
 6,easy,al-sudoku-easy-151,16,80,Easy,Easy,0,
-6,easy,al-sudoku-easy-152,12,286,Hard,Hard,10,
-6,easy,al-sudoku-easy-153,16,210,Hard,Medium,0,
+6,easy,al-sudoku-easy-152,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,easy,al-sudoku-easy-153,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,easy,al-sudoku-easy-154,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-155,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-156,13,92,Easy,Easy,0,
@@ -699,7 +699,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-171,18,72,Easy,Easy,0,
 6,easy,al-sudoku-easy-172,12,96,Easy,Easy,0,
 6,easy,al-sudoku-easy-173,13,92,Easy,Easy,0,
-6,easy,al-sudoku-easy-174,16,210,Hard,Medium,0,
+6,easy,al-sudoku-easy-174,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,easy,al-sudoku-easy-175,18,72,Easy,Easy,0,
 6,easy,al-sudoku-easy-176,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-177,11,100,Easy,Medium,0,
@@ -711,8 +711,8 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-182,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-183,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-184,16,80,Easy,Easy,0,
-6,easy,al-sudoku-easy-185,16,230,Hard,Medium,0,
-6,easy,al-sudoku-easy-186,17,126,Medium,Medium,0,
+6,easy,al-sudoku-easy-185,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,easy,al-sudoku-easy-186,17,126,Medium,Medium,1,
 6,easy,al-sudoku-easy-187,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-188,17,86,Easy,Easy,0,
 6,easy,al-sudoku-easy-189,16,90,Easy,Easy,0,
@@ -743,11 +743,11 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-210,18,82,Easy,Easy,0,
 6,easy,al-sudoku-easy-211,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-212,12,96,Easy,Easy,0,
-6,easy,al-sudoku-easy-213,17,86,Easy,Easy,0,
+6,easy,al-sudoku-easy-213,17,86,Easy,Easy,1,
 6,easy,al-sudoku-easy-214,16,100,Easy,Medium,0,
 6,easy,al-sudoku-easy-215,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-216,16,90,Easy,Easy,0,
-6,easy,al-sudoku-easy-217,12,226,Hard,Medium,0,
+6,easy,al-sudoku-easy-217,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,easy,al-sudoku-easy-218,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-219,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-22,14,98,Easy,Medium,0,
@@ -773,7 +773,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-238,13,92,Easy,Easy,0,
 6,easy,al-sudoku-easy-239,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-24,13,92,Easy,Easy,0,
-6,easy,al-sudoku-easy-240,12,236,Hard,Medium,0,
+6,easy,al-sudoku-easy-240,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,easy,al-sudoku-easy-241,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-242,16,90,Easy,Easy,0,
 6,easy,al-sudoku-easy-243,16,90,Easy,Easy,0,
@@ -794,7 +794,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-257,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-258,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-259,16,80,Easy,Easy,0,
-6,easy,al-sudoku-easy-26,16,100,Easy,Medium,0,
+6,easy,al-sudoku-easy-26,16,100,Easy,Medium,4,
 6,easy,al-sudoku-easy-260,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-261,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-262,17,76,Easy,Easy,0,
@@ -813,7 +813,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-274,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-275,18,72,Easy,Easy,0,
 6,easy,al-sudoku-easy-276,17,76,Easy,Easy,0,
-6,easy,al-sudoku-easy-277,16,230,Hard,Medium,0,
+6,easy,al-sudoku-easy-277,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,easy,al-sudoku-easy-278,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-279,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-28,16,80,Easy,Easy,0,
@@ -875,7 +875,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-33,12,96,Easy,Easy,0,
 6,easy,al-sudoku-easy-330,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-331,16,90,Easy,Easy,0,
-6,easy,al-sudoku-easy-332,11,240,Hard,Medium,0,
+6,easy,al-sudoku-easy-332,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,easy,al-sudoku-easy-333,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-334,16,90,Easy,Easy,0,
 6,easy,al-sudoku-easy-335,16,80,Easy,Easy,0,
@@ -934,7 +934,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-54,18,72,Easy,Easy,0,
 6,easy,al-sudoku-easy-55,12,96,Easy,Easy,0,
 6,easy,al-sudoku-easy-56,18,72,Easy,Easy,0,
-6,easy,al-sudoku-easy-57,13,242,Hard,Medium,0,
+6,easy,al-sudoku-easy-57,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,easy,al-sudoku-easy-58,14,88,Easy,Easy,0,
 6,easy,al-sudoku-easy-59,13,132,Easy,Medium,0,
 6,easy,al-sudoku-easy-6,17,76,Easy,Easy,0,
@@ -942,7 +942,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-61,16,140,Medium,Medium,0,
 6,easy,al-sudoku-easy-62,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-63,16,80,Easy,Easy,0,
-6,easy,al-sudoku-easy-64,10,234,Hard,Medium,0,
+6,easy,al-sudoku-easy-64,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,easy,al-sudoku-easy-65,14,88,Easy,Easy,0,
 6,easy,al-sudoku-easy-66,13,92,Easy,Easy,0,
 6,easy,al-sudoku-easy-67,17,86,Easy,Easy,0,
@@ -973,7 +973,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-9,18,72,Easy,Easy,0,
 6,easy,al-sudoku-easy-90,11,110,Easy,Medium,0,
 6,easy,al-sudoku-easy-91,12,96,Easy,Easy,0,
-6,easy,al-sudoku-easy-92,10,664,Hard,Hard,2,
+6,easy,al-sudoku-easy-92,,,,,,ArrayIndexOutOfBoundsException:Index 12 out of bounds for length 12
 6,easy,al-sudoku-easy-93,17,76,Easy,Easy,0,
 6,easy,al-sudoku-easy-94,16,80,Easy,Easy,0,
 6,easy,al-sudoku-easy-95,17,76,Easy,Easy,0,
@@ -981,23 +981,23 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,easy,al-sudoku-easy-97,12,106,Easy,Medium,0,
 6,easy,al-sudoku-easy-98,18,82,Easy,Easy,0,
 6,easy,al-sudoku-easy-99,11,100,Easy,Medium,0,
-6,hard,al-sudoku-hard-1,10,614,Hard,Hard,1,
-6,hard,al-sudoku-hard-10,9,648,Hard,Hard,1,
-6,hard,al-sudoku-hard-100,10,404,Hard,Hard,0,
-6,hard,al-sudoku-hard-101,11,970,Hard,Hard,1,
-6,hard,al-sudoku-hard-11,11,650,Hard,Hard,0,
+6,hard,al-sudoku-hard-1,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-10,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-100,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-101,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-11,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-12,10,134,Easy,Medium,0,
 6,hard,al-sudoku-hard-13,11,110,Easy,Medium,0,
 6,hard,al-sudoku-hard-14,11,100,Easy,Medium,0,
 6,hard,al-sudoku-hard-15,10,104,Easy,Medium,0,
 6,hard,al-sudoku-hard-16,10,114,Easy,Medium,0,
-6,hard,al-sudoku-hard-17,9,568,Hard,Hard,0,
-6,hard,al-sudoku-hard-18,10,454,Hard,Hard,0,
+6,hard,al-sudoku-hard-17,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-18,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-19,10,174,Medium,Medium,0,
-6,hard,al-sudoku-hard-2,9,428,Hard,Hard,2,
+6,hard,al-sudoku-hard-2,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-20,10,104,Easy,Medium,0,
-6,hard,al-sudoku-hard-21,9,388,Hard,Hard,0,
-6,hard,al-sudoku-hard-22,9,618,Hard,Hard,0,
+6,hard,al-sudoku-hard-21,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-22,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-23,12,116,Easy,Medium,0,
 6,hard,al-sudoku-hard-24,10,124,Easy,Medium,0,
 6,hard,al-sudoku-hard-25,10,114,Easy,Medium,0,
@@ -1018,16 +1018,16 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,hard,al-sudoku-hard-39,14,88,Easy,Easy,0,
 6,hard,al-sudoku-hard-4,11,110,Easy,Medium,0,
 6,hard,al-sudoku-hard-40,12,96,Easy,Easy,0,
-6,hard,al-sudoku-hard-41,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
-6,hard,al-sudoku-hard-42,10,554,Hard,Hard,0,
+6,hard,al-sudoku-hard-41,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-42,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-43,12,96,Easy,Easy,0,
-6,hard,al-sudoku-hard-44,12,426,Hard,Hard,0,
+6,hard,al-sudoku-hard-44,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-45,11,110,Easy,Medium,0,
-6,hard,al-sudoku-hard-46,11,360,Hard,Hard,0,
+6,hard,al-sudoku-hard-46,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-47,11,120,Easy,Medium,0,
 6,hard,al-sudoku-hard-48,10,144,Easy,Medium,0,
 6,hard,al-sudoku-hard-49,12,96,Easy,Easy,0,
-6,hard,al-sudoku-hard-5,11,110,Easy,Medium,0,
+6,hard,al-sudoku-hard-5,11,110,Easy,Medium,30,
 6,hard,al-sudoku-hard-50,10,104,Easy,Medium,0,
 6,hard,al-sudoku-hard-51,13,102,Easy,Medium,0,
 6,hard,al-sudoku-hard-52,12,146,Easy,Medium,0,
@@ -1035,7 +1035,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,hard,al-sudoku-hard-54,9,108,Easy,Medium,0,
 6,hard,al-sudoku-hard-55,10,114,Easy,Medium,0,
 6,hard,al-sudoku-hard-56,12,96,Easy,Easy,0,
-6,hard,al-sudoku-hard-57,10,884,Hard,Hard,1,
+6,hard,al-sudoku-hard-57,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-58,9,108,Easy,Medium,0,
 6,hard,al-sudoku-hard-59,14,98,Easy,Medium,0,
 6,hard,al-sudoku-hard-6,11,100,Easy,Medium,0,
@@ -1049,43 +1049,43 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,hard,al-sudoku-hard-67,12,96,Easy,Easy,0,
 6,hard,al-sudoku-hard-68,14,98,Easy,Medium,0,
 6,hard,al-sudoku-hard-69,13,92,Easy,Easy,0,
-6,hard,al-sudoku-hard-7,9,238,Hard,Medium,0,
+6,hard,al-sudoku-hard-7,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-70,14,88,Easy,Easy,0,
 6,hard,al-sudoku-hard-71,11,100,Easy,Medium,0,
 6,hard,al-sudoku-hard-72,14,88,Easy,Easy,0,
 6,hard,al-sudoku-hard-73,12,116,Easy,Medium,0,
 6,hard,al-sudoku-hard-74,10,124,Easy,Medium,0,
-6,hard,al-sudoku-hard-75,,,,,,ArrayIndexOutOfBoundsException:Index 5 out of bounds for length 5
+6,hard,al-sudoku-hard-75,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-76,11,100,Easy,Medium,0,
-6,hard,al-sudoku-hard-77,11,230,Hard,Medium,0,
+6,hard,al-sudoku-hard-77,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-78,12,96,Easy,Easy,0,
-6,hard,al-sudoku-hard-79,11,460,Hard,Hard,0,
-6,hard,al-sudoku-hard-8,9,298,Medium,Hard,0,
+6,hard,al-sudoku-hard-79,11,720,Hard,Hard,6,
+6,hard,al-sudoku-hard-8,9,298,Medium,Hard,1,
 6,hard,al-sudoku-hard-80,11,100,Easy,Medium,0,
 6,hard,al-sudoku-hard-81,12,106,Easy,Medium,0,
 6,hard,al-sudoku-hard-82,11,100,Easy,Medium,0,
 6,hard,al-sudoku-hard-83,11,260,Medium,Medium,0,
 6,hard,al-sudoku-hard-84,10,104,Easy,Medium,0,
-6,hard,al-sudoku-hard-85,9,518,Hard,Hard,0,
-6,hard,al-sudoku-hard-86,10,234,Hard,Medium,0,
-6,hard,al-sudoku-hard-87,10,254,Hard,Medium,0,
+6,hard,al-sudoku-hard-85,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-86,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-87,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-88,10,104,Easy,Medium,0,
 6,hard,al-sudoku-hard-89,10,104,Easy,Medium,0,
-6,hard,al-sudoku-hard-9,10,384,Hard,Hard,0,
+6,hard,al-sudoku-hard-9,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-90,9,178,Medium,Medium,0,
-6,hard,al-sudoku-hard-91,10,454,Hard,Hard,0,
+6,hard,al-sudoku-hard-91,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-92,11,170,Medium,Medium,0,
 6,hard,al-sudoku-hard-93,10,124,Easy,Medium,0,
-6,hard,al-sudoku-hard-94,10,314,Hard,Hard,0,
-6,hard,al-sudoku-hard-95,10,644,Hard,Hard,0,
-6,hard,al-sudoku-hard-96,9,458,Hard,Hard,0,
+6,hard,al-sudoku-hard-94,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-95,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,hard,al-sudoku-hard-96,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,hard,al-sudoku-hard-97,11,170,Easy,Medium,0,
-6,hard,al-sudoku-hard-98,12,436,Hard,Hard,0,
+6,hard,al-sudoku-hard-98,12,456,Hard,Hard,5,
 6,hard,al-sudoku-hard-99,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-1,14,88,Easy,Easy,0,
-6,medium,al-sudoku-medium-10,10,304,Hard,Hard,0,
+6,medium,al-sudoku-medium-10,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-100,13,102,Easy,Medium,0,
-6,medium,al-sudoku-medium-101,9,658,Hard,Hard,0,
+6,medium,al-sudoku-medium-101,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-102,10,174,Medium,Medium,0,
 6,medium,al-sudoku-medium-103,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-104,9,218,Medium,Medium,0,
@@ -1100,9 +1100,9 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-112,10,184,Easy,Medium,0,
 6,medium,al-sudoku-medium-113,12,106,Easy,Medium,0,
 6,medium,al-sudoku-medium-114,10,204,Medium,Medium,0,
-6,medium,al-sudoku-medium-115,11,320,Hard,Hard,0,
+6,medium,al-sudoku-medium-115,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-116,11,100,Easy,Medium,0,
-6,medium,al-sudoku-medium-117,11,250,Hard,Medium,0,
+6,medium,al-sudoku-medium-117,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-118,10,134,Easy,Medium,0,
 6,medium,al-sudoku-medium-119,11,110,Easy,Medium,0,
 6,medium,al-sudoku-medium-12,11,190,Medium,Medium,0,
@@ -1113,21 +1113,21 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-124,11,120,Easy,Medium,0,
 6,medium,al-sudoku-medium-125,10,124,Easy,Medium,0,
 6,medium,al-sudoku-medium-126,12,96,Easy,Easy,0,
-6,medium,al-sudoku-medium-127,9,268,Hard,Medium,0,
+6,medium,al-sudoku-medium-127,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-128,10,134,Easy,Medium,0,
-6,medium,al-sudoku-medium-129,11,230,Hard,Medium,0,
-6,medium,al-sudoku-medium-13,10,404,Hard,Hard,0,
-6,medium,al-sudoku-medium-130,10,374,Hard,Hard,0,
+6,medium,al-sudoku-medium-129,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,medium,al-sudoku-medium-13,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,medium,al-sudoku-medium-130,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-131,10,164,Easy,Medium,0,
 6,medium,al-sudoku-medium-132,9,198,Easy,Medium,0,
-6,medium,al-sudoku-medium-133,11,300,Hard,Hard,0,
-6,medium,al-sudoku-medium-134,10,414,Hard,Hard,0,
+6,medium,al-sudoku-medium-133,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,medium,al-sudoku-medium-134,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-135,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-136,11,230,Medium,Medium,0,
 6,medium,al-sudoku-medium-137,9,348,Medium,Hard,0,
 6,medium,al-sudoku-medium-138,10,194,Easy,Medium,0,
 6,medium,al-sudoku-medium-139,9,318,Medium,Hard,0,
-6,medium,al-sudoku-medium-14,9,808,Hard,Hard,1,
+6,medium,al-sudoku-medium-14,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-140,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-141,11,110,Easy,Medium,0,
 6,medium,al-sudoku-medium-142,9,298,Medium,Hard,0,
@@ -1138,49 +1138,49 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-147,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-148,10,114,Easy,Medium,0,
 6,medium,al-sudoku-medium-149,12,96,Easy,Easy,0,
-6,medium,al-sudoku-medium-15,9,428,Hard,Hard,0,
+6,medium,al-sudoku-medium-15,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-150,12,96,Easy,Easy,0,
-6,medium,al-sudoku-medium-151,10,494,Hard,Hard,0,
-6,medium,al-sudoku-medium-152,10,404,Hard,Hard,0,
+6,medium,al-sudoku-medium-151,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,medium,al-sudoku-medium-152,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-153,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-154,10,184,Easy,Medium,0,
-6,medium,al-sudoku-medium-155,9,548,Hard,Hard,0,
-6,medium,al-sudoku-medium-156,9,978,Hard,Unfair,1,
-6,medium,al-sudoku-medium-157,9,558,Hard,Hard,0,
+6,medium,al-sudoku-medium-155,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,medium,al-sudoku-medium-156,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
+6,medium,al-sudoku-medium-157,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-158,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-159,10,124,Easy,Medium,0,
 6,medium,al-sudoku-medium-16,11,100,Easy,Medium,0,
-6,medium,al-sudoku-medium-160,9,278,Medium,Medium,0,
+6,medium,al-sudoku-medium-160,9,278,Medium,Medium,1,
 6,medium,al-sudoku-medium-161,9,238,Medium,Medium,0,
 6,medium,al-sudoku-medium-162,11,130,Easy,Medium,0,
 6,medium,al-sudoku-medium-163,11,160,Easy,Medium,0,
-6,medium,al-sudoku-medium-164,12,416,Hard,Hard,0,
+6,medium,al-sudoku-medium-164,,,,,,ArrayIndexOutOfBoundsException:Index 36 out of bounds for length 36
 6,medium,al-sudoku-medium-165,9,208,Easy,Medium,0,
 6,medium,al-sudoku-medium-166,11,140,Easy,Medium,0,
 6,medium,al-sudoku-medium-167,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-168,11,110,Easy,Medium,0,
 6,medium,al-sudoku-medium-169,11,100,Easy,Medium,0,
-6,medium,al-sudoku-medium-17,10,284,Medium,Medium,0,
+6,medium,al-sudoku-medium-17,10,284,Medium,Medium,1,
 6,medium,al-sudoku-medium-170,12,116,Easy,Medium,0,
-6,medium,al-sudoku-medium-171,9,618,Hard,Hard,0,
+6,medium,al-sudoku-medium-171,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-172,13,92,Easy,Easy,0,
 6,medium,al-sudoku-medium-173,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-174,11,310,Hard,Hard,0,
+6,medium,al-sudoku-medium-174,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-175,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-176,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-177,11,120,Easy,Medium,0,
 6,medium,al-sudoku-medium-178,9,188,Medium,Medium,0,
-6,medium,al-sudoku-medium-179,9,538,Hard,Hard,40,
+6,medium,al-sudoku-medium-179,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-18,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-180,11,190,Medium,Medium,1,
-6,medium,al-sudoku-medium-181,9,488,Hard,Hard,2,
+6,medium,al-sudoku-medium-180,11,190,Medium,Medium,0,
+6,medium,al-sudoku-medium-181,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-182,10,114,Easy,Medium,0,
 6,medium,al-sudoku-medium-183,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-184,12,106,Easy,Medium,0,
 6,medium,al-sudoku-medium-185,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-186,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
-6,medium,al-sudoku-medium-187,10,564,Hard,Hard,1,
-6,medium,al-sudoku-medium-188,11,230,Hard,Medium,0,
+6,medium,al-sudoku-medium-186,10,344,Hard,Hard,1,
+6,medium,al-sudoku-medium-187,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-188,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-189,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-19,10,144,Easy,Medium,0,
 6,medium,al-sudoku-medium-190,11,120,Easy,Medium,0,
@@ -1190,10 +1190,10 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-194,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-195,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-196,10,154,Medium,Medium,0,
-6,medium,al-sudoku-medium-197,11,570,Hard,Hard,0,
-6,medium,al-sudoku-medium-198,10,304,Hard,Hard,0,
-6,medium,al-sudoku-medium-199,11,490,Hard,Hard,0,
-6,medium,al-sudoku-medium-2,11,420,Hard,Hard,0,
+6,medium,al-sudoku-medium-197,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-198,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-199,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-2,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-20,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-200,10,134,Easy,Medium,0,
 6,medium,al-sudoku-medium-201,12,166,Easy,Medium,0,
@@ -1204,11 +1204,11 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-206,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-207,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-208,11,110,Easy,Medium,0,
-6,medium,al-sudoku-medium-209,10,274,Hard,Medium,0,
-6,medium,al-sudoku-medium-21,11,360,Hard,Hard,0,
+6,medium,al-sudoku-medium-209,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-21,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-210,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-211,9,138,Easy,Medium,0,
-6,medium,al-sudoku-medium-212,9,318,Hard,Hard,0,
+6,medium,al-sudoku-medium-212,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-213,10,134,Easy,Medium,0,
 6,medium,al-sudoku-medium-214,9,238,Medium,Medium,0,
 6,medium,al-sudoku-medium-215,10,114,Easy,Medium,0,
@@ -1216,12 +1216,12 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-217,13,92,Easy,Easy,0,
 6,medium,al-sudoku-medium-218,10,114,Easy,Medium,0,
 6,medium,al-sudoku-medium-219,11,110,Easy,Medium,0,
-6,medium,al-sudoku-medium-22,10,404,Hard,Hard,0,
-6,medium,al-sudoku-medium-220,10,594,Hard,Hard,0,
+6,medium,al-sudoku-medium-22,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-220,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-221,9,108,Easy,Medium,0,
 6,medium,al-sudoku-medium-222,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-223,10,114,Easy,Medium,0,
-6,medium,al-sudoku-medium-224,10,244,Hard,Medium,0,
+6,medium,al-sudoku-medium-224,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-225,10,114,Easy,Medium,0,
 6,medium,al-sudoku-medium-226,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-227,11,120,Easy,Medium,0,
@@ -1229,30 +1229,30 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-229,9,118,Easy,Medium,0,
 6,medium,al-sudoku-medium-23,10,174,Easy,Medium,0,
 6,medium,al-sudoku-medium-230,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-231,9,238,Hard,Medium,0,
+6,medium,al-sudoku-medium-231,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-232,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-233,11,230,Medium,Medium,0,
 6,medium,al-sudoku-medium-234,10,134,Easy,Medium,0,
 6,medium,al-sudoku-medium-235,9,138,Easy,Medium,0,
-6,medium,al-sudoku-medium-236,9,698,Hard,Hard,0,
+6,medium,al-sudoku-medium-236,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-237,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-238,12,96,Easy,Easy,0,
-6,medium,al-sudoku-medium-239,9,678,Hard,Hard,0,
+6,medium,al-sudoku-medium-239,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-24,10,154,Easy,Medium,0,
-6,medium,al-sudoku-medium-240,10,234,Hard,Medium,0,
-6,medium,al-sudoku-medium-241,11,250,Hard,Medium,0,
+6,medium,al-sudoku-medium-240,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-241,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-242,11,120,Easy,Medium,0,
 6,medium,al-sudoku-medium-243,12,96,Easy,Easy,0,
-6,medium,al-sudoku-medium-244,11,370,Hard,Hard,0,
+6,medium,al-sudoku-medium-244,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-245,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-246,9,138,Easy,Medium,0,
-6,medium,al-sudoku-medium-247,9,418,Hard,Hard,0,
+6,medium,al-sudoku-medium-247,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-248,12,116,Easy,Medium,0,
 6,medium,al-sudoku-medium-249,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-25,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-250,12,106,Easy,Medium,0,
 6,medium,al-sudoku-medium-251,11,100,Easy,Medium,0,
-6,medium,al-sudoku-medium-252,11,440,Hard,Hard,0,
+6,medium,al-sudoku-medium-252,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-253,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-254,11,120,Easy,Medium,0,
 6,medium,al-sudoku-medium-255,12,116,Easy,Medium,0,
@@ -1261,13 +1261,13 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-258,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-259,10,154,Easy,Medium,0,
 6,medium,al-sudoku-medium-26,10,124,Easy,Medium,0,
-6,medium,al-sudoku-medium-260,10,544,Hard,Hard,0,
+6,medium,al-sudoku-medium-260,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-261,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-262,11,330,Medium,Hard,0,
 6,medium,al-sudoku-medium-263,9,108,Easy,Medium,0,
 6,medium,al-sudoku-medium-264,10,194,Medium,Medium,0,
 6,medium,al-sudoku-medium-265,12,146,Easy,Medium,0,
-6,medium,al-sudoku-medium-266,11,540,Hard,Hard,0,
+6,medium,al-sudoku-medium-266,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-267,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-268,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-269,11,130,Easy,Medium,0,
@@ -1275,11 +1275,11 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-270,10,134,Easy,Medium,0,
 6,medium,al-sudoku-medium-271,10,144,Easy,Medium,0,
 6,medium,al-sudoku-medium-272,10,144,Easy,Medium,0,
-6,medium,al-sudoku-medium-273,10,234,Hard,Medium,0,
+6,medium,al-sudoku-medium-273,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-274,10,144,Easy,Medium,0,
 6,medium,al-sudoku-medium-275,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-276,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-277,10,374,Hard,Hard,0,
+6,medium,al-sudoku-medium-277,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-278,10,114,Easy,Medium,0,
 6,medium,al-sudoku-medium-279,11,110,Easy,Medium,0,
 6,medium,al-sudoku-medium-28,9,118,Easy,Medium,0,
@@ -1287,24 +1287,24 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-281,10,124,Easy,Medium,0,
 6,medium,al-sudoku-medium-282,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-283,11,100,Easy,Medium,0,
-6,medium,al-sudoku-medium-284,8,962,Hard,Hard,0,
+6,medium,al-sudoku-medium-284,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-285,11,110,Easy,Medium,0,
-6,medium,al-sudoku-medium-286,9,588,Hard,Hard,0,
+6,medium,al-sudoku-medium-286,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-287,11,130,Easy,Medium,0,
-6,medium,al-sudoku-medium-288,10,584,Hard,Hard,0,
+6,medium,al-sudoku-medium-288,,,,,,ArrayIndexOutOfBoundsException:Index 12 out of bounds for length 12
 6,medium,al-sudoku-medium-289,10,114,Easy,Medium,0,
 6,medium,al-sudoku-medium-29,10,114,Easy,Medium,0,
 6,medium,al-sudoku-medium-290,9,178,Easy,Medium,0,
 6,medium,al-sudoku-medium-291,10,144,Easy,Medium,0,
 6,medium,al-sudoku-medium-292,10,194,Medium,Medium,0,
-6,medium,al-sudoku-medium-293,11,260,Hard,Medium,0,
-6,medium,al-sudoku-medium-294,9,298,Hard,Hard,0,
-6,medium,al-sudoku-medium-295,10,374,Hard,Hard,0,
+6,medium,al-sudoku-medium-293,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-294,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-295,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-296,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-297,11,160,Medium,Medium,0,
-6,medium,al-sudoku-medium-298,10,624,Hard,Hard,0,
-6,medium,al-sudoku-medium-299,9,248,Hard,Medium,0,
-6,medium,al-sudoku-medium-3,11,420,Hard,Hard,0,
+6,medium,al-sudoku-medium-298,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-299,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-3,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-30,11,160,Medium,Medium,0,
 6,medium,al-sudoku-medium-300,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-301,10,104,Easy,Medium,0,
@@ -1317,36 +1317,36 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-308,9,168,Easy,Medium,0,
 6,medium,al-sudoku-medium-309,14,88,Easy,Easy,0,
 6,medium,al-sudoku-medium-31,13,122,Easy,Medium,0,
-6,medium,al-sudoku-medium-310,10,434,Hard,Hard,0,
-6,medium,al-sudoku-medium-311,12,236,Hard,Medium,0,
+6,medium,al-sudoku-medium-310,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-311,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-312,10,114,Easy,Medium,0,
 6,medium,al-sudoku-medium-313,12,106,Easy,Medium,0,
 6,medium,al-sudoku-medium-314,12,106,Easy,Medium,0,
 6,medium,al-sudoku-medium-315,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-316,11,110,Easy,Medium,0,
 6,medium,al-sudoku-medium-317,11,120,Easy,Medium,0,
-6,medium,al-sudoku-medium-318,9,558,Hard,Hard,0,
-6,medium,al-sudoku-medium-319,12,476,Hard,Hard,0,
+6,medium,al-sudoku-medium-318,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-319,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-32,11,100,Easy,Medium,0,
-6,medium,al-sudoku-medium-320,11,420,Hard,Hard,0,
+6,medium,al-sudoku-medium-320,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-321,11,100,Easy,Medium,0,
-6,medium,al-sudoku-medium-322,11,240,Hard,Medium,0,
-6,medium,al-sudoku-medium-323,10,514,Hard,Hard,0,
-6,medium,al-sudoku-medium-324,9,248,Hard,Medium,0,
+6,medium,al-sudoku-medium-322,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-323,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-324,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-325,9,198,Medium,Medium,0,
-6,medium,al-sudoku-medium-326,11,320,Hard,Hard,0,
+6,medium,al-sudoku-medium-326,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-327,9,108,Easy,Medium,0,
 6,medium,al-sudoku-medium-328,13,92,Easy,Easy,0,
 6,medium,al-sudoku-medium-329,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-33,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-330,10,544,Hard,Hard,0,
+6,medium,al-sudoku-medium-330,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-331,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-332,9,408,Hard,Hard,0,
+6,medium,al-sudoku-medium-332,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-333,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-334,10,864,Hard,Hard,3,
+6,medium,al-sudoku-medium-334,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-335,10,124,Easy,Medium,0,
 6,medium,al-sudoku-medium-336,11,100,Easy,Medium,0,
-6,medium,al-sudoku-medium-337,10,484,Hard,Hard,0,
+6,medium,al-sudoku-medium-337,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-338,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-339,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-34,9,158,Medium,Medium,0,
@@ -1366,7 +1366,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-44,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-45,10,214,Medium,Medium,0,
 6,medium,al-sudoku-medium-46,11,100,Easy,Medium,0,
-6,medium,al-sudoku-medium-47,10,854,Hard,Hard,0,
+6,medium,al-sudoku-medium-47,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-48,12,126,Easy,Medium,0,
 6,medium,al-sudoku-medium-49,12,146,Easy,Medium,0,
 6,medium,al-sudoku-medium-5,11,100,Easy,Medium,0,
@@ -1375,28 +1375,28 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-52,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-53,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-54,12,116,Easy,Medium,0,
-6,medium,al-sudoku-medium-55,10,654,Hard,Hard,0,
+6,medium,al-sudoku-medium-55,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-56,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-57,11,120,Easy,Medium,0,
 6,medium,al-sudoku-medium-58,11,130,Easy,Medium,0,
 6,medium,al-sudoku-medium-59,9,308,Medium,Hard,0,
 6,medium,al-sudoku-medium-6,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-60,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-61,9,708,Hard,Hard,0,
-6,medium,al-sudoku-medium-62,12,256,Hard,Medium,0,
+6,medium,al-sudoku-medium-61,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-62,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-63,10,104,Easy,Medium,0,
-6,medium,al-sudoku-medium-64,10,414,Hard,Hard,0,
+6,medium,al-sudoku-medium-64,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-65,11,140,Easy,Medium,0,
-6,medium,al-sudoku-medium-66,9,238,Hard,Medium,0,
-6,medium,al-sudoku-medium-67,11,500,Hard,Hard,0,
-6,medium,al-sudoku-medium-68,10,234,Hard,Medium,0,
+6,medium,al-sudoku-medium-66,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-67,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-68,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-69,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-7,10,124,Easy,Medium,0,
 6,medium,al-sudoku-medium-70,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-71,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-72,10,114,Easy,Medium,0,
 6,medium,al-sudoku-medium-73,10,194,Medium,Medium,0,
-6,medium,al-sudoku-medium-74,10,334,Hard,Hard,0,
+6,medium,al-sudoku-medium-74,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-75,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-76,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-77,12,106,Easy,Medium,0,
@@ -1408,20 +1408,20 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 6,medium,al-sudoku-medium-82,10,244,Medium,Medium,0,
 6,medium,al-sudoku-medium-83,10,104,Easy,Medium,0,
 6,medium,al-sudoku-medium-84,10,124,Easy,Medium,0,
-6,medium,al-sudoku-medium-85,10,374,Hard,Hard,0,
-6,medium,al-sudoku-medium-86,9,488,Hard,Hard,0,
+6,medium,al-sudoku-medium-85,,,,,,ArrayIndexOutOfBoundsException:null
+6,medium,al-sudoku-medium-86,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-87,9,128,Easy,Medium,0,
-6,medium,al-sudoku-medium-88,9,248,Hard,Medium,0,
+6,medium,al-sudoku-medium-88,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-89,9,158,Easy,Medium,0,
 6,medium,al-sudoku-medium-9,10,174,Medium,Medium,0,
-6,medium,al-sudoku-medium-90,12,256,Hard,Medium,0,
+6,medium,al-sudoku-medium-90,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-91,10,114,Easy,Medium,0,
-6,medium,al-sudoku-medium-92,10,634,Hard,Hard,0,
+6,medium,al-sudoku-medium-92,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-93,13,112,Easy,Medium,0,
 6,medium,al-sudoku-medium-94,11,100,Easy,Medium,0,
 6,medium,al-sudoku-medium-95,9,138,Easy,Medium,0,
 6,medium,al-sudoku-medium-96,10,114,Easy,Medium,0,
-6,medium,al-sudoku-medium-97,11,430,Hard,Hard,0,
+6,medium,al-sudoku-medium-97,,,,,,ArrayIndexOutOfBoundsException:null
 6,medium,al-sudoku-medium-98,12,96,Easy,Easy,0,
 6,medium,al-sudoku-medium-99,10,104,Easy,Medium,0,
 7,easy,al-sudoku-easy-1,28,84,Easy,Easy,0,
@@ -1618,21 +1618,21 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 7,easy,al-sudoku-easy-99,28,84,Easy,Easy,0,
 7,hard,al-sudoku-hard-1,18,234,Medium,Hard,0,
 7,hard,al-sudoku-hard-10,18,254,Medium,Hard,0,
-7,hard,al-sudoku-hard-100,17,328,Hard,Hard,0,
-7,hard,al-sudoku-hard-101,19,300,Hard,Hard,0,
-7,hard,al-sudoku-hard-102,17,328,Hard,Hard,0,
-7,hard,al-sudoku-hard-103,19,450,Hard,Hard,0,
-7,hard,al-sudoku-hard-104,18,324,Hard,Hard,0,
-7,hard,al-sudoku-hard-105,19,300,Hard,Hard,0,
-7,hard,al-sudoku-hard-106,18,434,Hard,Hard,0,
-7,hard,al-sudoku-hard-107,18,414,Hard,Hard,0,
-7,hard,al-sudoku-hard-108,16,382,Hard,Hard,0,
-7,hard,al-sudoku-hard-109,16,322,Hard,Hard,0,
+7,hard,al-sudoku-hard-100,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-101,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-102,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-103,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-104,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-105,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-106,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-107,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-108,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-109,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
 7,hard,al-sudoku-hard-11,18,224,Medium,Hard,0,
 7,hard,al-sudoku-hard-110,15,346,Medium,Hard,0,
-7,hard,al-sudoku-hard-111,18,304,Hard,Hard,0,
-7,hard,al-sudoku-hard-112,16,502,Hard,Hard,0,
-7,hard,al-sudoku-hard-113,17,348,Hard,Hard,0,
+7,hard,al-sudoku-hard-111,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-112,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-113,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
 7,hard,al-sudoku-hard-12,18,224,Medium,Hard,0,
 7,hard,al-sudoku-hard-13,18,214,Medium,Hard,0,
 7,hard,al-sudoku-hard-14,18,264,Medium,Hard,0,
@@ -1724,11 +1724,11 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 7,hard,al-sudoku-hard-92,16,272,Medium,Hard,0,
 7,hard,al-sudoku-hard-93,17,208,Medium,Hard,0,
 7,hard,al-sudoku-hard-94,18,244,Medium,Hard,0,
-7,hard,al-sudoku-hard-95,18,454,Hard,Hard,0,
-7,hard,al-sudoku-hard-96,17,378,Hard,Hard,0,
-7,hard,al-sudoku-hard-97,18,314,Hard,Hard,0,
-7,hard,al-sudoku-hard-98,19,290,Hard,Hard,0,
-7,hard,al-sudoku-hard-99,18,344,Hard,Hard,0,
+7,hard,al-sudoku-hard-95,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-96,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-97,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-98,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
+7,hard,al-sudoku-hard-99,,,,,,ArrayIndexOutOfBoundsException:Index 14 out of bounds for length 14
 7,medium,al-sudoku-medium-1,25,96,Easy,Medium,0,
 7,medium,al-sudoku-medium-10,23,104,Easy,Medium,0,
 7,medium,al-sudoku-medium-100,20,116,Easy,Medium,0,
@@ -1957,7 +1957,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,easy,al-sudoku-easy-157,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-158,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-159,32,128,Easy,Easy,0,
-8,easy,al-sudoku-easy-16,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,easy,al-sudoku-easy-16,22,52868,Extreme,Extreme,426,
 8,easy,al-sudoku-easy-160,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-161,33,134,Easy,Easy,0,
 8,easy,al-sudoku-easy-162,32,188,Medium,Medium,0,
@@ -1985,7 +1985,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,easy,al-sudoku-easy-182,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-183,32,128,Easy,Easy,0,
 8,easy,al-sudoku-easy-184,32,128,Easy,Easy,0,
-8,easy,al-sudoku-easy-185,33,254,Hard,Medium,0,
+8,easy,al-sudoku-easy-185,33,10120,Extreme,Extreme,38,
 8,easy,al-sudoku-easy-186,34,120,Easy,Easy,0,
 8,easy,al-sudoku-easy-187,34,120,Easy,Easy,0,
 8,easy,al-sudoku-easy-188,34,120,Easy,Easy,0,
@@ -2050,7 +2050,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,easy,al-sudoku-easy-240,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-241,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-242,33,124,Easy,Easy,0,
-8,easy,al-sudoku-easy-243,33,254,Hard,Medium,0,
+8,easy,al-sudoku-easy-243,33,10120,Extreme,Extreme,35,
 8,easy,al-sudoku-easy-244,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-245,32,138,Easy,Medium,0,
 8,easy,al-sudoku-easy-246,34,120,Easy,Easy,0,
@@ -2123,7 +2123,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,easy,al-sudoku-easy-306,34,130,Easy,Easy,0,
 8,easy,al-sudoku-easy-307,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-308,32,128,Easy,Easy,0,
-8,easy,al-sudoku-easy-309,32,268,Hard,Medium,0,
+8,easy,al-sudoku-easy-309,32,10294,Extreme,Extreme,43,
 8,easy,al-sudoku-easy-31,34,120,Easy,Easy,0,
 8,easy,al-sudoku-easy-310,32,128,Easy,Easy,0,
 8,easy,al-sudoku-easy-311,32,128,Easy,Easy,0,
@@ -2197,7 +2197,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,easy,al-sudoku-easy-47,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-48,32,128,Easy,Easy,0,
 8,easy,al-sudoku-easy-49,33,124,Easy,Easy,0,
-8,easy,al-sudoku-easy-5,24,340,Medium,Hard,0,
+8,easy,al-sudoku-easy-5,24,340,Medium,Hard,1,
 8,easy,al-sudoku-easy-50,33,134,Easy,Easy,0,
 8,easy,al-sudoku-easy-51,34,130,Easy,Easy,0,
 8,easy,al-sudoku-easy-52,32,128,Easy,Easy,0,
@@ -2224,7 +2224,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,easy,al-sudoku-easy-71,22,188,Easy,Medium,0,
 8,easy,al-sudoku-easy-72,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-73,32,128,Easy,Easy,0,
-8,easy,al-sudoku-easy-74,33,254,Hard,Medium,0,
+8,easy,al-sudoku-easy-74,33,10120,Extreme,Extreme,44,
 8,easy,al-sudoku-easy-75,32,138,Easy,Medium,0,
 8,easy,al-sudoku-easy-76,33,124,Easy,Easy,0,
 8,easy,al-sudoku-easy-77,33,124,Easy,Easy,0,
@@ -2258,44 +2258,44 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,hard,al-sudoku-hard-101,19,190,Easy,Medium,0,
 8,hard,al-sudoku-hard-102,20,236,Medium,Medium,0,
 8,hard,al-sudoku-hard-103,19,260,Easy,Medium,0,
-8,hard,al-sudoku-hard-104,20,866,Hard,Hard,2,
+8,hard,al-sudoku-hard-104,20,41420,Extreme,Extreme,246,
 8,hard,al-sudoku-hard-105,23,264,Easy,Medium,0,
 8,hard,al-sudoku-hard-106,19,550,Medium,Hard,0,
 8,hard,al-sudoku-hard-107,17,358,Medium,Hard,0,
 8,hard,al-sudoku-hard-108,19,180,Easy,Medium,0,
-8,hard,al-sudoku-hard-109,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-109,19,31888,Extreme,Extreme,214,
 8,hard,al-sudoku-hard-11,21,202,Easy,Medium,0,
 8,hard,al-sudoku-hard-110,19,330,Easy,Hard,0,
 8,hard,al-sudoku-hard-111,20,306,Easy,Medium,0,
 8,hard,al-sudoku-hard-112,18,244,Easy,Medium,0,
-8,hard,al-sudoku-hard-113,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-113,19,54490,Extreme,Extreme,545,
 8,hard,al-sudoku-hard-114,22,178,Easy,Medium,0,
 8,hard,al-sudoku-hard-115,22,238,Easy,Medium,0,
-8,hard,al-sudoku-hard-116,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-116,17,35276,Extreme,Extreme,638,
 8,hard,al-sudoku-hard-117,20,176,Easy,Medium,0,
 8,hard,al-sudoku-hard-118,20,206,Easy,Medium,0,
 8,hard,al-sudoku-hard-12,20,216,Easy,Medium,0,
 8,hard,al-sudoku-hard-13,21,242,Easy,Medium,0,
-8,hard,al-sudoku-hard-14,19,1120,Hard,Hard,1,
+8,hard,al-sudoku-hard-14,19,32358,Extreme,Extreme,307,
 8,hard,al-sudoku-hard-15,19,250,Easy,Medium,0,
 8,hard,al-sudoku-hard-16,19,370,Medium,Hard,0,
 8,hard,al-sudoku-hard-17,18,294,Medium,Medium,0,
-8,hard,al-sudoku-hard-18,19,540,Hard,Hard,0,
+8,hard,al-sudoku-hard-18,19,10406,Extreme,Extreme,57,
 8,hard,al-sudoku-hard-19,18,284,Medium,Medium,0,
 8,hard,al-sudoku-hard-2,18,244,Easy,Medium,0,
 8,hard,al-sudoku-hard-20,19,270,Medium,Medium,0,
 8,hard,al-sudoku-hard-21,19,270,Easy,Medium,0,
 8,hard,al-sudoku-hard-22,18,324,Easy,Hard,0,
-8,hard,al-sudoku-hard-23,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
-8,hard,al-sudoku-hard-24,20,406,Hard,Hard,0,
+8,hard,al-sudoku-hard-23,20,78868,Extreme,Extreme,1273,
+8,hard,al-sudoku-hard-24,20,20528,Extreme,Extreme,133,
 8,hard,al-sudoku-hard-25,20,236,Easy,Medium,0,
-8,hard,al-sudoku-hard-26,18,1044,Hard,Hard,1,
-8,hard,al-sudoku-hard-27,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-26,18,32912,Extreme,Extreme,515,
+8,hard,al-sudoku-hard-27,19,33128,Extreme,Extreme,313,
 8,hard,al-sudoku-hard-28,19,310,Medium,Hard,0,
 8,hard,al-sudoku-hard-29,21,282,Easy,Medium,0,
-8,hard,al-sudoku-hard-3,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-3,18,36922,Extreme,Extreme,850,
 8,hard,al-sudoku-hard-30,19,490,Medium,Hard,0,
-8,hard,al-sudoku-hard-31,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-31,19,34558,Extreme,Extreme,592,
 8,hard,al-sudoku-hard-32,22,268,Medium,Medium,0,
 8,hard,al-sudoku-hard-33,20,256,Easy,Medium,0,
 8,hard,al-sudoku-hard-34,23,214,Easy,Medium,0,
@@ -2305,19 +2305,19 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,hard,al-sudoku-hard-38,18,234,Medium,Medium,0,
 8,hard,al-sudoku-hard-39,18,264,Easy,Medium,0,
 8,hard,al-sudoku-hard-4,18,594,Medium,Hard,0,
-8,hard,al-sudoku-hard-40,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
-8,hard,al-sudoku-hard-41,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-40,22,20270,Extreme,Extreme,121,
+8,hard,al-sudoku-hard-41,20,54056,Extreme,Extreme,643,
 8,hard,al-sudoku-hard-42,20,266,Easy,Medium,0,
 8,hard,al-sudoku-hard-43,19,350,Medium,Hard,0,
 8,hard,al-sudoku-hard-44,20,456,Medium,Hard,0,
 8,hard,al-sudoku-hard-45,18,184,Easy,Medium,0,
 8,hard,al-sudoku-hard-46,18,404,Medium,Hard,0,
-8,hard,al-sudoku-hard-47,19,940,Hard,Hard,1,
+8,hard,al-sudoku-hard-47,19,41524,Extreme,Extreme,299,
 8,hard,al-sudoku-hard-48,19,370,Medium,Hard,0,
 8,hard,al-sudoku-hard-49,20,266,Medium,Medium,0,
-8,hard,al-sudoku-hard-5,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-5,19,10406,Extreme,Extreme,61,
 8,hard,al-sudoku-hard-50,21,172,Easy,Medium,0,
-8,hard,al-sudoku-hard-51,19,710,Hard,Hard,0,
+8,hard,al-sudoku-hard-51,19,41724,Extreme,Extreme,351,
 8,hard,al-sudoku-hard-52,19,290,Easy,Medium,0,
 8,hard,al-sudoku-hard-53,17,788,Hard,Hard,0,
 8,hard,al-sudoku-hard-54,18,284,Easy,Medium,0,
@@ -2339,24 +2339,24 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,hard,al-sudoku-hard-69,22,288,Medium,Medium,0,
 8,hard,al-sudoku-hard-7,20,346,Medium,Hard,0,
 8,hard,al-sudoku-hard-70,21,192,Easy,Medium,0,
-8,hard,al-sudoku-hard-71,20,416,Hard,Hard,0,
+8,hard,al-sudoku-hard-71,20,10282,Extreme,Extreme,61,
 8,hard,al-sudoku-hard-72,22,258,Easy,Medium,0,
 8,hard,al-sudoku-hard-73,19,350,Medium,Hard,0,
-8,hard,al-sudoku-hard-74,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
-8,hard,al-sudoku-hard-75,20,1126,Hard,Hard,1,
-8,hard,al-sudoku-hard-76,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-74,19,20522,Extreme,Extreme,133,
+8,hard,al-sudoku-hard-75,20,30904,Extreme,Extreme,199,
+8,hard,al-sudoku-hard-76,18,61170,Extreme,Extreme,500,
 8,hard,al-sudoku-hard-77,21,292,Easy,Medium,0,
 8,hard,al-sudoku-hard-78,27,148,Easy,Medium,0,
 8,hard,al-sudoku-hard-79,18,354,Medium,Hard,0,
 8,hard,al-sudoku-hard-8,19,310,Medium,Hard,0,
-8,hard,al-sudoku-hard-80,21,542,Hard,Hard,0,
+8,hard,al-sudoku-hard-80,21,902,Hard,Hard,0,
 8,hard,al-sudoku-hard-81,23,234,Easy,Medium,0,
 8,hard,al-sudoku-hard-82,21,212,Easy,Medium,0,
 8,hard,al-sudoku-hard-83,18,204,Easy,Medium,0,
 8,hard,al-sudoku-hard-84,21,342,Easy,Hard,0,
 8,hard,al-sudoku-hard-85,21,182,Easy,Medium,0,
 8,hard,al-sudoku-hard-86,19,280,Easy,Medium,0,
-8,hard,al-sudoku-hard-87,21,592,Hard,Hard,0,
+8,hard,al-sudoku-hard-87,21,41386,Extreme,Extreme,306,
 8,hard,al-sudoku-hard-88,19,210,Easy,Medium,0,
 8,hard,al-sudoku-hard-89,24,160,Easy,Medium,0,
 8,hard,al-sudoku-hard-9,19,500,Medium,Hard,0,
@@ -2367,7 +2367,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,hard,al-sudoku-hard-94,22,218,Easy,Medium,0,
 8,hard,al-sudoku-hard-95,22,188,Easy,Medium,0,
 8,hard,al-sudoku-hard-96,20,236,Easy,Medium,0,
-8,hard,al-sudoku-hard-97,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,hard,al-sudoku-hard-97,20,10212,Extreme,Extreme,61,
 8,hard,al-sudoku-hard-98,19,290,Easy,Medium,0,
 8,hard,al-sudoku-hard-99,26,152,Easy,Medium,0,
 8,medium,al-sudoku-medium-1,22,188,Easy,Medium,0,
@@ -2396,15 +2396,15 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-12,20,296,Medium,Medium,0,
 8,medium,al-sudoku-medium-120,22,178,Easy,Medium,0,
 8,medium,al-sudoku-medium-121,23,164,Easy,Medium,0,
-8,medium,al-sudoku-medium-122,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-122,18,30442,Extreme,Extreme,202,
 8,medium,al-sudoku-medium-123,22,278,Easy,Medium,0,
 8,medium,al-sudoku-medium-124,23,174,Easy,Medium,0,
 8,medium,al-sudoku-medium-125,19,180,Easy,Medium,0,
 8,medium,al-sudoku-medium-126,24,160,Easy,Medium,0,
-8,medium,al-sudoku-medium-127,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-127,18,71076,Extreme,Extreme,428,
 8,medium,al-sudoku-medium-128,20,176,Easy,Medium,0,
 8,medium,al-sudoku-medium-129,22,168,Easy,Medium,0,
-8,medium,al-sudoku-medium-13,19,590,Hard,Hard,0,
+8,medium,al-sudoku-medium-13,19,10636,Extreme,Extreme,45,
 8,medium,al-sudoku-medium-130,23,184,Easy,Medium,0,
 8,medium,al-sudoku-medium-131,23,174,Easy,Medium,0,
 8,medium,al-sudoku-medium-132,22,438,Medium,Hard,0,
@@ -2428,14 +2428,14 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-149,19,420,Medium,Hard,0,
 8,medium,al-sudoku-medium-15,19,190,Easy,Medium,0,
 8,medium,al-sudoku-medium-150,20,306,Medium,Medium,0,
-8,medium,al-sudoku-medium-151,19,710,Hard,Hard,0,
-8,medium,al-sudoku-medium-152,24,300,Hard,Medium,0,
-8,medium,al-sudoku-medium-153,18,394,Hard,Hard,0,
-8,medium,al-sudoku-medium-154,21,992,Hard,Hard,0,
+8,medium,al-sudoku-medium-151,19,20582,Extreme,Extreme,121,
+8,medium,al-sudoku-medium-152,24,20162,Extreme,Extreme,125,
+8,medium,al-sudoku-medium-153,18,10550,Extreme,Extreme,63,
+8,medium,al-sudoku-medium-154,21,31510,Extreme,Extreme,239,
 8,medium,al-sudoku-medium-155,24,220,Easy,Medium,0,
 8,medium,al-sudoku-medium-156,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-157,23,184,Easy,Medium,0,
-8,medium,al-sudoku-medium-158,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-158,18,10410,Extreme,Extreme,59,
 8,medium,al-sudoku-medium-159,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-16,21,252,Medium,Medium,0,
 8,medium,al-sudoku-medium-160,24,230,Easy,Medium,0,
@@ -2443,12 +2443,12 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-162,18,304,Easy,Medium,0,
 8,medium,al-sudoku-medium-163,23,174,Easy,Medium,0,
 8,medium,al-sudoku-medium-164,24,170,Easy,Medium,0,
-8,medium,al-sudoku-medium-165,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-165,19,30968,Extreme,Extreme,272,
 8,medium,al-sudoku-medium-166,19,400,Medium,Hard,0,
 8,medium,al-sudoku-medium-167,25,156,Easy,Medium,0,
 8,medium,al-sudoku-medium-168,22,358,Medium,Hard,0,
 8,medium,al-sudoku-medium-169,24,160,Easy,Medium,0,
-8,medium,al-sudoku-medium-17,21,442,Hard,Hard,0,
+8,medium,al-sudoku-medium-17,21,10568,Extreme,Extreme,67,
 8,medium,al-sudoku-medium-170,22,168,Easy,Medium,0,
 8,medium,al-sudoku-medium-171,23,184,Easy,Medium,0,
 8,medium,al-sudoku-medium-172,22,288,Easy,Medium,0,
@@ -2463,17 +2463,17 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-180,21,232,Easy,Medium,0,
 8,medium,al-sudoku-medium-181,22,328,Easy,Hard,0,
 8,medium,al-sudoku-medium-182,25,166,Easy,Medium,0,
-8,medium,al-sudoku-medium-183,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
-8,medium,al-sudoku-medium-184,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
-8,medium,al-sudoku-medium-185,19,700,Hard,Hard,0,
+8,medium,al-sudoku-medium-183,20,10522,Extreme,Extreme,48,
+8,medium,al-sudoku-medium-184,20,30544,Extreme,Extreme,157,
+8,medium,al-sudoku-medium-185,19,40354,Extreme,Extreme,261,
 8,medium,al-sudoku-medium-186,20,196,Easy,Medium,0,
 8,medium,al-sudoku-medium-187,19,520,Medium,Hard,0,
 8,medium,al-sudoku-medium-188,21,222,Easy,Medium,0,
 8,medium,al-sudoku-medium-189,21,212,Easy,Medium,0,
-8,medium,al-sudoku-medium-19,19,820,Hard,Hard,0,
+8,medium,al-sudoku-medium-19,19,44314,Extreme,Extreme,657,
 8,medium,al-sudoku-medium-190,19,240,Easy,Medium,0,
 8,medium,al-sudoku-medium-191,22,238,Easy,Medium,0,
-8,medium,al-sudoku-medium-192,23,294,Hard,Medium,0,
+8,medium,al-sudoku-medium-192,23,314,Hard,Hard,0,
 8,medium,al-sudoku-medium-193,24,180,Easy,Medium,0,
 8,medium,al-sudoku-medium-194,24,160,Easy,Medium,0,
 8,medium,al-sudoku-medium-195,22,208,Easy,Medium,0,
@@ -2484,13 +2484,13 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-2,24,170,Easy,Medium,0,
 8,medium,al-sudoku-medium-20,19,200,Easy,Medium,0,
 8,medium,al-sudoku-medium-200,19,240,Easy,Medium,0,
-8,medium,al-sudoku-medium-201,19,800,Hard,Hard,0,
+8,medium,al-sudoku-medium-201,19,40464,Extreme,Extreme,254,
 8,medium,al-sudoku-medium-202,21,362,Medium,Hard,0,
 8,medium,al-sudoku-medium-203,22,178,Easy,Medium,0,
 8,medium,al-sudoku-medium-204,23,224,Easy,Medium,0,
 8,medium,al-sudoku-medium-205,22,168,Easy,Medium,0,
 8,medium,al-sudoku-medium-206,21,202,Easy,Medium,0,
-8,medium,al-sudoku-medium-207,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-207,20,30854,Extreme,Extreme,222,
 8,medium,al-sudoku-medium-208,21,212,Easy,Medium,0,
 8,medium,al-sudoku-medium-209,18,284,Easy,Medium,0,
 8,medium,al-sudoku-medium-21,19,450,Medium,Hard,0,
@@ -2500,7 +2500,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-213,20,206,Easy,Medium,0,
 8,medium,al-sudoku-medium-214,20,476,Medium,Hard,0,
 8,medium,al-sudoku-medium-215,21,252,Easy,Medium,0,
-8,medium,al-sudoku-medium-216,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-216,24,31438,Extreme,Extreme,284,
 8,medium,al-sudoku-medium-217,24,170,Easy,Medium,0,
 8,medium,al-sudoku-medium-218,19,260,Easy,Medium,0,
 8,medium,al-sudoku-medium-219,23,164,Easy,Medium,0,
@@ -2508,25 +2508,25 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-220,23,174,Easy,Medium,0,
 8,medium,al-sudoku-medium-221,19,190,Easy,Medium,0,
 8,medium,al-sudoku-medium-222,22,188,Easy,Medium,0,
-8,medium,al-sudoku-medium-223,19,970,Hard,Hard,1,
+8,medium,al-sudoku-medium-223,19,43324,Extreme,Extreme,516,
 8,medium,al-sudoku-medium-224,22,178,Easy,Medium,0,
 8,medium,al-sudoku-medium-225,23,174,Easy,Medium,0,
 8,medium,al-sudoku-medium-226,,,,,,timeout-after-5000ms
-8,medium,al-sudoku-medium-227,25,206,Medium,Medium,0,
+8,medium,al-sudoku-medium-227,25,194,Easy,Medium,0,
 8,medium,al-sudoku-medium-228,21,212,Easy,Medium,0,
 8,medium,al-sudoku-medium-229,20,286,Medium,Medium,0,
 8,medium,al-sudoku-medium-23,18,534,Hard,Hard,0,
-8,medium,al-sudoku-medium-230,23,704,Hard,Hard,0,
-8,medium,al-sudoku-medium-231,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-230,23,30432,Extreme,Extreme,104,
+8,medium,al-sudoku-medium-231,19,55180,Extreme,Extreme,695,
 8,medium,al-sudoku-medium-232,25,156,Easy,Medium,0,
 8,medium,al-sudoku-medium-233,19,180,Easy,Medium,0,
-8,medium,al-sudoku-medium-234,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-234,21,50522,Extreme,Extreme,326,
 8,medium,al-sudoku-medium-235,19,590,Hard,Hard,0,
-8,medium,al-sudoku-medium-236,19,420,Hard,Hard,0,
+8,medium,al-sudoku-medium-236,19,440,Hard,Hard,0,
 8,medium,al-sudoku-medium-237,19,240,Easy,Medium,0,
 8,medium,al-sudoku-medium-238,23,174,Easy,Medium,0,
 8,medium,al-sudoku-medium-239,21,182,Easy,Medium,0,
-8,medium,al-sudoku-medium-24,21,1132,Hard,Unfair,1,
+8,medium,al-sudoku-medium-24,21,13368,Extreme,Extreme,326,
 8,medium,al-sudoku-medium-240,20,716,Medium,Hard,0,
 8,medium,al-sudoku-medium-241,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-242,22,218,Easy,Medium,0,
@@ -2534,10 +2534,10 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-244,20,266,Easy,Medium,0,
 8,medium,al-sudoku-medium-245,25,156,Easy,Medium,0,
 8,medium,al-sudoku-medium-246,18,444,Medium,Hard,0,
-8,medium,al-sudoku-medium-247,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-247,19,12846,Extreme,Extreme,178,
 8,medium,al-sudoku-medium-248,23,174,Easy,Medium,0,
 8,medium,al-sudoku-medium-249,19,210,Easy,Medium,0,
-8,medium,al-sudoku-medium-25,23,304,Hard,Medium,0,
+8,medium,al-sudoku-medium-25,23,10170,Extreme,Extreme,54,
 8,medium,al-sudoku-medium-250,25,166,Easy,Medium,0,
 8,medium,al-sudoku-medium-251,18,244,Easy,Medium,0,
 8,medium,al-sudoku-medium-252,23,174,Easy,Medium,0,
@@ -2559,15 +2559,15 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-267,19,250,Easy,Medium,0,
 8,medium,al-sudoku-medium-268,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-269,19,290,Medium,Medium,0,
-8,medium,al-sudoku-medium-27,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-27,18,21476,Extreme,Extreme,170,
 8,medium,al-sudoku-medium-270,22,168,Easy,Medium,0,
-8,medium,al-sudoku-medium-271,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-271,18,74616,Extreme,Extreme,830,
 8,medium,al-sudoku-medium-272,22,248,Easy,Medium,0,
 8,medium,al-sudoku-medium-273,19,240,Easy,Medium,0,
 8,medium,al-sudoku-medium-274,24,220,Easy,Medium,0,
 8,medium,al-sudoku-medium-275,25,276,Medium,Medium,0,
 8,medium,al-sudoku-medium-276,22,238,Easy,Medium,0,
-8,medium,al-sudoku-medium-277,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-277,18,21126,Extreme,Extreme,166,
 8,medium,al-sudoku-medium-278,19,310,Medium,Hard,0,
 8,medium,al-sudoku-medium-279,19,300,Easy,Medium,0,
 8,medium,al-sudoku-medium-28,20,196,Easy,Medium,0,
@@ -2577,7 +2577,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-283,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-284,20,236,Easy,Medium,0,
 8,medium,al-sudoku-medium-285,24,160,Easy,Medium,0,
-8,medium,al-sudoku-medium-286,17,918,Hard,Hard,0,
+8,medium,al-sudoku-medium-286,17,85706,Extreme,Extreme,1041,
 8,medium,al-sudoku-medium-287,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-288,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-289,25,156,Easy,Medium,0,
@@ -2587,7 +2587,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-292,20,186,Easy,Medium,0,
 8,medium,al-sudoku-medium-293,19,320,Medium,Hard,0,
 8,medium,al-sudoku-medium-294,23,224,Easy,Medium,0,
-8,medium,al-sudoku-medium-295,19,1350,Hard,Unfair,0,
+8,medium,al-sudoku-medium-295,19,41124,Extreme,Extreme,264,
 8,medium,al-sudoku-medium-296,22,248,Easy,Medium,0,
 8,medium,al-sudoku-medium-297,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-298,23,164,Easy,Medium,0,
@@ -2598,16 +2598,16 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-301,24,170,Easy,Medium,0,
 8,medium,al-sudoku-medium-302,19,270,Easy,Medium,0,
 8,medium,al-sudoku-medium-303,23,164,Easy,Medium,0,
-8,medium,al-sudoku-medium-304,23,404,Hard,Hard,0,
+8,medium,al-sudoku-medium-304,23,594,Hard,Hard,0,
 8,medium,al-sudoku-medium-305,18,544,Medium,Hard,0,
 8,medium,al-sudoku-medium-306,22,238,Easy,Medium,0,
 8,medium,al-sudoku-medium-307,19,580,Hard,Hard,0,
 8,medium,al-sudoku-medium-308,23,174,Easy,Medium,0,
 8,medium,al-sudoku-medium-309,20,326,Medium,Hard,0,
-8,medium,al-sudoku-medium-31,25,426,Hard,Hard,0,
+8,medium,al-sudoku-medium-31,25,316,Hard,Hard,0,
 8,medium,al-sudoku-medium-310,22,188,Easy,Medium,0,
 8,medium,al-sudoku-medium-311,23,184,Easy,Medium,0,
-8,medium,al-sudoku-medium-312,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-312,19,40394,Extreme,Extreme,246,
 8,medium,al-sudoku-medium-313,20,186,Easy,Medium,0,
 8,medium,al-sudoku-medium-314,23,204,Easy,Medium,0,
 8,medium,al-sudoku-medium-315,19,520,Medium,Hard,0,
@@ -2630,10 +2630,10 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-330,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-331,20,226,Easy,Medium,0,
 8,medium,al-sudoku-medium-332,19,260,Easy,Medium,0,
-8,medium,al-sudoku-medium-333,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-333,21,20364,Extreme,Extreme,108,
 8,medium,al-sudoku-medium-334,24,170,Easy,Medium,0,
 8,medium,al-sudoku-medium-335,23,194,Easy,Medium,0,
-8,medium,al-sudoku-medium-336,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-336,20,10582,Extreme,Extreme,50,
 8,medium,al-sudoku-medium-337,23,164,Easy,Medium,0,
 8,medium,al-sudoku-medium-338,23,174,Easy,Medium,0,
 8,medium,al-sudoku-medium-339,22,198,Easy,Medium,0,
@@ -2646,12 +2646,12 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-345,23,244,Easy,Medium,0,
 8,medium,al-sudoku-medium-35,18,434,Medium,Hard,0,
 8,medium,al-sudoku-medium-36,20,376,Medium,Hard,0,
-8,medium,al-sudoku-medium-37,18,844,Hard,Hard,0,
+8,medium,al-sudoku-medium-37,18,25826,Extreme,Extreme,625,
 8,medium,al-sudoku-medium-38,20,246,Medium,Medium,0,
 8,medium,al-sudoku-medium-39,24,220,Easy,Medium,0,
 8,medium,al-sudoku-medium-4,21,282,Medium,Medium,0,
 8,medium,al-sudoku-medium-40,23,164,Easy,Medium,0,
-8,medium,al-sudoku-medium-41,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-41,18,10450,Extreme,Extreme,67,
 8,medium,al-sudoku-medium-42,18,724,Medium,Hard,0,
 8,medium,al-sudoku-medium-43,20,306,Medium,Medium,0,
 8,medium,al-sudoku-medium-44,24,160,Easy,Medium,0,
@@ -2673,7 +2673,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-59,22,168,Easy,Medium,0,
 8,medium,al-sudoku-medium-6,21,292,Easy,Medium,0,
 8,medium,al-sudoku-medium-60,19,280,Medium,Medium,0,
-8,medium,al-sudoku-medium-61,20,1006,Hard,Hard,0,
+8,medium,al-sudoku-medium-61,20,31194,Extreme,Extreme,209,
 8,medium,al-sudoku-medium-62,19,300,Medium,Medium,0,
 8,medium,al-sudoku-medium-63,22,168,Easy,Medium,0,
 8,medium,al-sudoku-medium-64,20,196,Easy,Medium,0,
@@ -2681,7 +2681,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-66,21,312,Medium,Hard,0,
 8,medium,al-sudoku-medium-67,22,198,Easy,Medium,0,
 8,medium,al-sudoku-medium-68,23,164,Easy,Medium,0,
-8,medium,al-sudoku-medium-69,,,,,,ArrayIndexOutOfBoundsException:arraycopy: last source index 2 out of bounds for long[1]
+8,medium,al-sudoku-medium-69,20,40740,Extreme,Extreme,317,
 8,medium,al-sudoku-medium-7,22,248,Easy,Medium,0,
 8,medium,al-sudoku-medium-70,21,182,Easy,Medium,0,
 8,medium,al-sudoku-medium-71,21,172,Easy,Medium,0,
@@ -2691,7 +2691,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-75,22,258,Easy,Medium,0,
 8,medium,al-sudoku-medium-76,24,400,Medium,Hard,0,
 8,medium,al-sudoku-medium-77,23,214,Easy,Medium,0,
-8,medium,al-sudoku-medium-78,18,574,Hard,Hard,0,
+8,medium,al-sudoku-medium-78,18,10440,Extreme,Extreme,61,
 8,medium,al-sudoku-medium-79,23,194,Easy,Medium,0,
 8,medium,al-sudoku-medium-8,18,294,Easy,Medium,0,
 8,medium,al-sudoku-medium-80,23,164,Easy,Medium,0,
@@ -2700,11 +2700,11 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 8,medium,al-sudoku-medium-83,20,176,Easy,Medium,0,
 8,medium,al-sudoku-medium-84,21,232,Easy,Medium,0,
 8,medium,al-sudoku-medium-85,21,172,Easy,Medium,0,
-8,medium,al-sudoku-medium-86,18,504,Medium,Hard,1,
+8,medium,al-sudoku-medium-86,18,504,Medium,Hard,0,
 8,medium,al-sudoku-medium-87,21,242,Easy,Medium,0,
 8,medium,al-sudoku-medium-88,18,194,Easy,Medium,0,
 8,medium,al-sudoku-medium-89,21,292,Medium,Medium,0,
-8,medium,al-sudoku-medium-9,21,762,Hard,Hard,3,
+8,medium,al-sudoku-medium-9,21,10778,Extreme,Extreme,63,
 8,medium,al-sudoku-medium-90,21,372,Medium,Hard,0,
 8,medium,al-sudoku-medium-91,20,316,Medium,Hard,0,
 8,medium,al-sudoku-medium-92,24,160,Easy,Medium,0,
@@ -3738,7 +3738,7 @@ size,difficulty,puzzle_id,givens,score,level,size_band,ms,note
 9,medium,al-sudoku-medium-360,25,314,Easy,Medium,0,
 9,medium,al-sudoku-medium-361,27,446,Easy,Hard,0,
 9,medium,al-sudoku-medium-362,24,388,Easy,Medium,0,
-9,medium,al-sudoku-medium-363,25,364,Easy,Medium,1,
+9,medium,al-sudoku-medium-363,25,364,Easy,Medium,0,
 9,medium,al-sudoku-medium-364,25,284,Easy,Medium,0,
 9,medium,al-sudoku-medium-365,23,332,Easy,Medium,0,
 9,medium,al-sudoku-medium-37,24,438,Easy,Hard,0,

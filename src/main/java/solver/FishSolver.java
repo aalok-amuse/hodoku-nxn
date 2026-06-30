@@ -403,6 +403,12 @@ public class FishSolver extends AbstractSolver {
 		SolutionStep result = null;
 		sudoku = finder.getSudoku();
 		ensureBuffersSized(sudoku);
+		// Fish search uses 9x9-specific helpers downstream
+		// (SpecData.getBuddies9x9, allConstraintsTemplates indexing).
+		// Skip on non-9x9 boards until those helpers are size-aware.
+		if (sudoku.getUnitCount() != 9) {
+			return null;
+		}
 		int size = 2;
 		switch (type) {
 		case LEVIATHAN:
@@ -1690,7 +1696,12 @@ public class FishSolver extends AbstractSolver {
 	private void initForCandidat(int size, boolean withFins, boolean lines) {
 		numberOfBaseUnits = numberOfAllCoverUnits = 0;
 
-		// go through all sets
+		// allConstraintsTemplates layout: [rows..., cols..., boxes...].
+		// For 9x9 this means rows=0..8, cols=9..17, boxes=18..26 (the original
+		// 9/18 magic numbers). We tried generalising with n/2n, but FishSolver's
+		// downstream search (searchCoverUnits -> SpecData.getBuddies9x9) is
+		// itself 9x9-only and crashes on smaller specs. Until those helpers
+		// are size-aware, do nothing at non-9x9 and let the solver fall back.
 		for (int i = 0; i < sudoku.getSpecData().allConstraintsTemplates.length; i++) {
 			if (i >= 18 && fishType == BASIC) {
 				continue;

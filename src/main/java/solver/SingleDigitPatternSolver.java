@@ -545,11 +545,17 @@ public class SingleDigitPatternSolver extends AbstractSolver {
 	 * @return
 	 */
 	private SolutionStep findSkyscraper(boolean lines, boolean onlyOne) {
-		// indices in free
+		// The whole single-digit-pattern family uses 9x9-shaped tables
+		// (erSets/erLines/erCols, free indexing, only2Indices peers) and the
+		// downstream FishSolver helpers it relies on are also 9x9-only.
+		// Without a full size-aware rewrite, the only safe behaviour at
+		// non-9x9 is to skip — same pattern as Empty Rectangle (lines 210/229).
+		if (sudoku.getUnitCount() != 9) {
+			return null;
+		}
 		int cStart = 0;
 		int cEnd = 9;
 		if (!lines) {
-			// adjust for columns
 			cStart += 9;
 			cEnd += 9;
 		}

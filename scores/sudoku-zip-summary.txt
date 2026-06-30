@@ -1,0 +1,17 @@
+size    diff     n  err  minS  medS  maxS  levels
+   4    easy   184    0    32    40    48  Easy=184
+   4  medium   125    0    40    48    48  Easy=125
+   5    easy    90    0    48    52    60  Easy=90
+   5    hard   112    0    60    68   128  Easy=112
+   5  medium   106    0    48    56    74  Easy=106
+   6    easy   365    0    68    80   664  Easy=349, Hard=11, Medium=5
+   6    hard    99    2    84   114   970  Easy=67, Hard=26, Medium=6
+   6  medium   341    1    88   120   978  Easy=225, Hard=83, Medium=33
+   7    easy   192    0    84    88   142  Easy=192
+   7  medium   161    0    92   116   206  Easy=161
+   8    easy   361    1   116   128   340  Easy=354, Hard=4, Medium=3
+   8    hard   105   13   134   266  1126  Easy=63, Medium=30, Hard=12
+   8  medium   325   20   138   212  1350  Easy=236, Medium=63, Hard=26
+   9    easy   365    0   160   192   364  Easy=365
+   9    hard   365    0   298   484   844  Medium=365
+   9  medium   365    0   224   358   526  Easy=365

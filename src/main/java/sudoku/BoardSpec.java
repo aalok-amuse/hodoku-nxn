@@ -54,6 +54,8 @@ public final class BoardSpec {
     public static final BoardSpec S6  = new BoardSpec(6,  3, 2);
     /** Pre-built spec: 7x7 Latin square (no boxes). */
     public static final BoardSpec S7  = new BoardSpec(7,  0, 0);
+    /** Pre-built spec: 8x8 with 4-wide x 2-tall boxes. */
+    public static final BoardSpec S8  = new BoardSpec(8,  4, 2);
     /** Pre-built spec: 9x9 with 3x3 boxes (standard). */
     public static final BoardSpec S9  = new BoardSpec(9,  3, 3);
     /** Pre-built spec: 16x16 with 4x4 boxes. */
@@ -66,6 +68,7 @@ public final class BoardSpec {
             case 5:  return S5;
             case 6:  return S6;
             case 7:  return S7;
+            case 8:  return S8;
             case 9:  return S9;
             case 16: return S16;
             default: throw new IllegalArgumentException("unsupported size n=" + n);
